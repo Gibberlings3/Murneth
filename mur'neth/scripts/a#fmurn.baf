@@ -1,0 +1,29 @@
+IF
+Global("A#MURNRETURN","GLOBAL",2)
+See(Player1)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+GlobalGT("A#MURNRETURN","GLOBAL",2)
+HPPercentGT(Myself,50)
+See(NearestEnemyOf(Myself))
+THEN
+RESPONSE #100
+Attack(NearestEnemyOf(Myself))
+END
+
+IF
+GlobalGT("A#MURNRETURN","GLOBAL",2)
+Global("A#change","LOCALS",0)
+HPPercentLT(Myself,50)
+See(NearestEnemyOf(Myself))
+THEN
+RESPONSE #100
+ReallyForceSpellRES("A#GHAUN1",Myself)
+SetGlobal("A#change","LOCALS",1)
+Attack(NearestEnemyOf(Myself))
+END
+

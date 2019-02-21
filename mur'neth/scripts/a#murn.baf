@@ -1,0 +1,44 @@
+IF
+AreaCheck("%ValleyoftheTombs%")
+Global("A#MurnPostMinesChat","LOCALS",0)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+SetGlobal("A#MurnPostMinesChat","LOCALS",1)
+END
+
+IF
+AreaCheck("%Candlekeep_Library_L1%")
+Global("A#MurnCandlekeep","LOCALS",0)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+SetGlobal("A#MurnCandlekeep","LOCALS",1)
+END
+
+IF
+AreaCheck("%IceIsland%")
+Global("A#MurnIce","LOCALS",0)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+SetGlobal("A#MurnIce","LOCALS",1)
+END
+
+IF
+AreaCheck("%Undercity%")
+Global("A#MurnFinal","LOCALS",0)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+SetGlobal("A#MurnFinal","LOCALS",1)
+END
+
+IF
+AreaCheck("%NashkelMines_L4%")
+Global("A#MurnKobold","LOCALS",0)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+SetGlobal("A#MurnKobold","LOCALS",1)
+END

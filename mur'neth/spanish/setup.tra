@@ -1,0 +1,87 @@
+@0 = ~El mod Mur'Neth NPC para Baldur's Gate Tutu o Baldur's Gate Trilogy-WeiDU~
+@1 = ~Forma de Lodo~
+@2 = ~Forma Humana~
+@3 = ~Toque Lodo~
+@4 = ~Ghaunadan~
+@5 = ~Ghaunadan~
+@6 = ~GHAUNADAN: Estos monstruos viles e inteligentes son los leales siervos de Ghaunadaur, la malvada deidad venerada por lodos, cienos, gelatinas y algunos drow. Los Ghaunadan son similares a lodos, pero son bastante inteligentes y sus cuerpos pueden adoptar la forma de un atractivo humanoide. En su forma natural, un ghaunadan es una criatura parecida a una gelatina ocre o un lodo verde.
+
+Los Ghaunadan carecen de muchas ventajas de los ladrones, pero esto se compensa con habilidades únicas propias, como su mirada hechizante y resistencias únicas.
+
+Ventajas:
+-  Puede lanzar Amigos una vez al día por cada 2 niveles.
+-  Inmune a ceguera, veneno, enfermedad, sueño, parálisis y aturdimiento. Además, posee un 10% de resistencia al daño contundente.
+-  Puede realizar un ataque Toque Lodo una vez al día por cada 3 niveles. Esta habilidad dura 5 asaltos. El ataque inflige 1d6 puntos de daño y el objetivo debe salvarse contra veneno con un penalizador -2 o quedará inmovilizado durante 5 asaltos.
+-  Puede cambiar entre las formas de lodo y humano una vez al día por cada 5 niveles. En la forma de lodo, todos los ataques del personaje son paralizantes. No hay límite en el tiempo pasado en cada forma.
+
+Desventajas:
+-  Sólo obtiene 15 puntos de aptitud por nivel.
+-  No puede apuñalar por la espalda.
+-  No puede poner trampas.~
+@7 = ~Mur'Neth~
+@8 = ~Saludos... Soy Mur'Neth.~ [A#MURN00]
+@9 = ~¡Volveré! Más adelante...~ [A#MURN01]
+@10 = ~Es un honor para este grupo hacer la voluntad de Ghaunadaur.~ [A#MURN02]
+@11 = ~Vuestras acciones no me complacen.~ [A#MURN03]
+@12 = ~Vuestras acciones no cumplen la voluntad de Ghaunadaur.~ [A#MURN04]
+@13 = ~¡Que Ghaunadaur os maldiga a todos! ¡No seguiré aguantando esto por más tiempo!~ [A#MURN05]
+@14 = ~¡En nombre de Ghaunadaur, os llevaré a la gloria!~ [A#MURN06]
+@15 = ~Es hora de descansar, y rezar...~ [A#MURN07]
+@16 = ~¡Esta inactividad no sirve a nadie!~ [A#MURN08]
+@17 = ~¡Por Ghaunadaur!~ [A#MURN09]
+@18 = ~¡Al Abisssmo con vos!~ [A#MURN10]
+@19 = ~¡Descubrid el oscuro abrazo de la muerte!~ [A#MURN11]
+@20 = ~¡¡¡Sssslkkk!!!~ [A#MURN12]
+@21 = ~~ [A#MURN13]
+@22 = ~~ [A#MURN14]
+@23 = ~Las heridas se curarán con el tiempo...~ [A#MURN15]
+@24 = ~Los musgos, las babosas... Incluso aquí, Ghaunadaur tiene sus siervos.~ [A#MURN16]
+@25 = ~Las ciudades son el escondrijo perfecto para los siervos de Ghaunadaur...~ [A#MURN17]
+@26 = ~¡Ah, estamos en un lugar glorioso!~ [A#MURN18]
+@27 = ~Me han dicho que es de día, pero esas cosas son insignificantes para alguien como yo.~ [A#MURN19]
+@28 = ~Prefiero la noche. Hace mucho más frío...~ [A#MURN20]
+@29 = ~Gthrrr...~ [A#MURN21]
+@30 = ~¿Sssí?~ [A#MURN22]
+@31 = ~Presiento que me llamáis...~ [A#MURN23]
+@32 = ~¿Qué?~ [A#MURN24]
+@33 = ~¡Os he oído!~ [A#MURN25]
+@34 = ~Ssssschlrr...~ [A#MURN26]
+@35 = ~Muy bien.~ [A#MURN27]
+@36 = ~Como deseéis.~ [A#MURN28]
+@37 = ~¡En nombre de Ghaunadaur!~ [A#MURN29]
+@38 = ~Una tarea fácil.~ [A#MURN30]
+@39 = ~Flllrrr...~ [A#MURN31]
+@40 = ~Kccccccch...~ [A#MURN32]
+@41 = ~A mi ritmo, creo...~ [A#MURN33]
+@42 = ~¡Sirvo a Ghaunadaur, no a vos! ¡Dejadme!~ [A#MURN34]
+@43 = ~Me cansan vuestros constantes golpecitos de mano en mi hombro... No es que yo tenga un hombro de verdad... Hmm...~ [A#MURN35]
+@44 = ~Caed, gusano...~ [A#MURN36]
+@45 = ~¡Arrrppp!~ [A#MURN37]
+@46 = ~¡Esto es... imposible!~ [A#MURN38]
+@47 = ~¡Llevad vuestra propia basura!~ [A#MURN39]
+@48 = ~Por la gloria de Ghaunadaur, ahora esto es mío.~ [A#MURN40]
+@49 = ~Nunca sabrán qué les golpeó...~ [A#MURN41]
+@50 = ~¡Sacrilegio!~ [A#MURN42]
+@51 = ~Alejaos.~ [A#MURN43]
+@52 = ~Cuando le preguntáis por su pasado, MUR'NETH se gira hacia vos y emite un gorgoteo largo y tosco. Aunque su verdadera forma es la de un lodo, parece gustarle que se refieran a él como un varón.
+
+Intuís por sus palabras una profunda devoción a su deidad Ghaunadaur, creador de su raza. Mur'Neth revela que eso es típico de su especie - verdaderamente viven para servirle. Mur'Neth fue engendrado recientemente sólo para investigar la corrupción del mineral de las Minas de Nashkel, por la cual murieron muchos de los lodos y mohos que habitaban en la zona. Esto disgustó a Ghaunadaur en gran medida, aunque parece estar satisfecho con que Mur'Neth os acompañe por ahora...~
+@53 = ~Por favor, no presiones Escape para cerrar la ventana, presiona Enter para salir.
+Esto es para permitir la descompresión del audio.~
+@54 = ~Tienes Indira instalado, añadiendo banters extra...~
+@55 = ~Tienes Finch instalado, añadiendo banters extra...~
+@56 = ~¡Hora de cortar algunos FILETES!~ [GDOPP03]
+@57 = ~~ [GDOPP04]
+@58 = ~¡Las apariencias engañan, simio!~ [GDOPP01]
+@59 = ~No os resistáis, vuestra muerte será menos... dolorosa.~ [GDOPP02]
+@60 = ~~ [DOPPL08]
+@61 = ~~ [DOPP08]
+@62 = ~~ [DOPP09]
+@63 = ~~ [DOPP05]
+@64 = ~~ [DOPPL09]
+@65 = ~Hechicero Ghaunadan~
+@66 = ~Druida Ghaunadan~
+@67 = ~~ [DOPPL05]
+@68 = ~~ [DOPPL04]
+@69 = ~Eliminar sonidos raros de selección~
+@70 = ~Necesitas tener Mur'Neth instalado para seleccionar esta opción.~

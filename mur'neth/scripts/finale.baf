@@ -1,0 +1,47 @@
+IF
+Global("A#MURNRETURN","GLOBAL",1)
+THEN
+RESPONSE #100
+CreateCreature("A#FMURN",[4565.1052],12)
+CreateCreature("A#FSOR",[4482.1014],12)
+CreateCreature("A#FDRU",[4492.1095],12)
+SetGlobal("A#MURNRETURN","GLOBAL",2)
+END
+
+IF
+Global("A#MURNRETURN","GLOBAL",3)
+THEN
+RESPONSE #100
+ActionOverride("A#FMURN",Enemy())
+ActionOverride("A#FSOR",Enemy())
+ActionOverride("A#FDRU",Enemy())
+CreateCreature("%tutu_var%JELLMU",[4579.893],12)
+CreateCreature("%tutu_var%JELLMU",[4803.887],12)
+CreateCreature("%tutu_var%JELLMU",[4687.1104],12)
+CreateCreature("%tutu_var%JELLMU",[4792.1122],12)
+SetGlobal("A#MURNRETURN","GLOBAL",4)
+END
+
+IF
+Global("A#MURNRETURN","GLOBAL",4)
+THEN
+RESPONSE #100
+Wait(10)
+CreateVisualEffect("SPRAISED",[4856.877])
+CreateVisualEffect("SPRAISED",[4900.890])
+CreateVisualEffect("SPRAISED",[4700.900])
+CreateVisualEffect("SPRAISED",[4800.935])
+CreateVisualEffect("SPRAISED",[4850.950])
+CreateVisualEffect("SPRAISED",[4680.1010])
+CreateVisualEffect("SPRAISED",[4995.1040])
+CreateVisualEffect("SPRAISED",[4920.1050])
+CreateCreature("%tutu_var%ZOMBIE",[4856.877],1)
+CreateCreature("%tutu_var%ZOMBIE",[4900.890],3)
+CreateCreature("%tutu_var%ZOMBIE",[4700.900],5)
+CreateCreature("%tutu_var%ZOMBIE",[4800.935],7)
+CreateCreature("%tutu_var%ZOMBIE",[4850.950],9)
+CreateCreature("%tutu_var%ZOMBIE",[4680.1010],11)
+CreateCreature("%tutu_var%ZOMBIE",[4995.1040],13)
+CreateCreature("%tutu_var%ZOMBIE",[4920.1050],15)
+SetGlobal("A#MURNRETURN","GLOBAL",5)
+END

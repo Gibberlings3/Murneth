@@ -1,0 +1,89 @@
+@0 = ~The Mur'Neth NPC Mod~
+@1 = ~Shapeshift: ooze~
+@2 = ~Shapeshift: human~
+@3 = ~Ooze Touch~
+@4 = ~ghaunadan~
+@5 = ~Ghaunadan~
+@6 = ~GHAUNADAN: These vile, intelligent monsters are the loyal servants of Ghaunadaur, the evil deity venerated by oozes, slimes, jellies and some drow. Ghaunadans are similar to oozes, but they are quite intelligent and can form their bodies into the shape of an attractive humanoid. In its natural form, a ghaunadan resembles an oozelike creature such as an ochre jelly or green slime.
+
+Ghaunadans lack many of the advantages of thieves, but make up for these with unique abilities of their own, such as their charming gaze and unique resistances.
+
+Advantages:
+-  May cast Friends once per day per 2 levels.
+-  Immune to blindness, poison, disease, sleep, paralysis and stunning. In addition, they have 10% resistance to bludgeoning damage.
+-  Can make an Ooze Touch attack once per day per 3 levels. This ability lasts for 5 rounds. The attack does 1d6 damage and the target must save vs. poison at -2 or be held for 5 rounds.
+-  Can shapeshift between ooze and human forms once per day per 5 levels. While in ooze form, all the character's attacks are paralytic. There is no limit to the time spent in either form.
+
+Disadvantages:
+-  Only gets 15 skill points per level.
+-  Cannot set traps.~
+@7 = ~Mur'Neth~
+@8 = ~Greetings... I am Mur'Neth.~ [A#MURN00]
+@9 = ~I *will* return! Later...~ [A#MURN01]
+@10 = ~It is an honour for this party to be doing the will of Ghaunadaur.~ [A#MURN02]
+@11 = ~Your actions are not pleasing.~ [A#MURN03]
+@12 = ~Your actions do not follow the will of Ghaunadaur.~ [A#MURN04]
+@13 = ~Ghaunadaur curse you all! I will stand this no longer!~ [A#MURN05]
+@14 = ~In Ghaunadaur's name, I shall lead us to glory!~ [A#MURN06]
+@15 = ~It is time to rest, and pray...~ [A#MURN07]
+@16 = ~This inaction serves nobody!~ [A#MURN08]
+@17 = ~For Ghaunadaur!~ [A#MURN09]
+@18 = ~To the Abysss with you!~ [A#MURN10]
+@19 = ~You shall know death's dark embrace!~ [A#MURN11]
+@20 = ~sssslkkk!!!~ [A#MURN12]
+@21 = ~~ [A#MURN13]
+@22 = ~~ [A#MURN14]
+@23 = ~Wounds heal given time...~ [A#MURN15]
+@24 = ~The mosses, the slugs... Even here, Ghaunadaur has his servants.~ [A#MURN16]
+@25 = ~Cities are the perfect hiding place for Ghaunadaur's servants...~ [A#MURN17]
+@26 = ~Ah, how glorious a place we are in!~ [A#MURN18]
+@27 = ~I am told it is light now, but such things are meaningless to one such as I.~ [A#MURN19]
+@28 = ~I prefer the nighttime. It is far cooler...~ [A#MURN20]
+@29 = ~gthrrr...~ [A#MURN21]
+@30 = ~Yesss?~ [A#MURN22]
+@31 = ~I sense you calling...~ [A#MURN23]
+@32 = ~What?~ [A#MURN24]
+@33 = ~I hear you!~ [A#MURN25]
+@34 = ~ssssschlrr...~ [A#MURN26]
+@35 = ~Very well.~ [A#MURN27]
+@36 = ~As you wish.~ [A#MURN28]
+@37 = ~In Ghaunadaur's name!~ [A#MURN29]
+@38 = ~A simple matter.~ [A#MURN30]
+@39 = ~flllrrr...~ [A#MURN31]
+@40 = ~kccccccch...~ [A#MURN32]
+@41 = ~In my *own* time, I think...~ [A#MURN33]
+@42 = ~I serve Ghaunadaur, not you! Leave me be!~ [A#MURN34]
+@43 = ~I get tired of this constant tapping of your hand on my shoulder... Not that I really *have* a shoulder... Hmm...~ [A#MURN35]
+@44 = ~Fall, worm...~ [A#MURN36]
+@45 = ~Arrrppp!~ [A#MURN37]
+@46 = ~This is... Not possible!~ [A#MURN38]
+@47 = ~Carry your own refuse!~ [A#MURN39]
+@48 = ~For the glory of Ghaunadaur, this is mine now.~ [A#MURN40]
+@49 = ~They shall never know what hit them...~ [A#MURN41]
+@50 = ~Sacrilige!~ [A#MURN42]
+@51 = ~Stay away.~ [A#MURN43]
+@52 = ~When you ask about his past, MUR'NETH turns towards you and lets out a long, tortured gurgle. Although his true form is that of an ooze, he seems comfortable being referred to as a male.
+
+You glean from his words a deep devotion to his deity Ghaunadaur, creator of his race. Mur'Neth reveals this is typical for his kind - they truly live to serve him. Mur'Neth was spawned only recently to investigate the tainting of the ores beneath the Nashkel Mines, which has resulted in the deaths of many of the native oozes and moulds in the area. This displeased Ghaunadaur greatly, though he seems content to permit Mur'Neth to accompany you for now...~
+@53 = ~Please do not Escape out of window, press Enter instead to quit.
+This is to allow audio decompression.~
+@54 = ~You have Indira installed, adding extra banters...~
+@55 = ~You have Finch installed, adding extra banters...~
+@56 = ~Time to fillet some MEAT!~ [GDOPP03]
+@57 = ~~ [GDOPP04]
+@58 = ~Appearances can be deceiving, monkey!~ [GDOPP01]
+@59 = ~Give yourself up, your death will be less ... painful.~ [GDOPP02]
+@60 = ~~ [DOPPL08]
+@61 = ~~ [DOPP08]
+@62 = ~~ [DOPP09]
+@63 = ~~ [DOPP05]
+@64 = ~~ [DOPPL09]
+@65 = ~Ghaunadan Sorcerer~
+@66 = ~Ghaunadan Druid~
+@67 = ~~ [DOPPL05]
+@68 = ~~ [DOPPL04]
+@69 = ~Remove Rare selection sounds~
+@70 = ~You need to have Mur'Neth installed to select this option.~
+
+@100 = ~This mod is for Tutu, BGT, EET, or BG:EE~
+@101 = ~Modmerge is required before mods can be installed on this game. Check the readme for more information and a link to download Modmerge.~

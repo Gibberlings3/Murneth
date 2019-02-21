@@ -1,0 +1,83 @@
+ACTION_IF NOT VARIABLE_IS_SET firebeadstate1 THEN BEGIN
+
+  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+
+    INCLUDE ~mur'neth/lib/g3_bgee_cpmvars.tpa~
+
+  END ELSE BEGIN
+
+    ACTION_IF GAME_IS ~eet~ THEN BEGIN
+
+      INCLUDE ~eet/other/cpmvars/eet_cpmvars.tpa~
+
+    END ELSE BEGIN
+
+      ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN
+
+        INCLUDE ~mur'neth/lib/g3_tutu_cpmvars.tpa~
+
+      END ELSE BEGIN
+
+        ACTION_IF GAME_IS ~bgt~ THEN BEGIN
+  
+          INCLUDE ~mur'neth/lib/g3_bgt_cpmvars.tpa~
+          
+        END ELSE BEGIN
+  
+          INCLUDE ~mur'neth/lib/g3_bg_cpmvars.tpa~
+
+        END
+
+      END
+
+    END
+
+  END
+
+  DEFINE_ACTION_FUNCTION cd_extend_bg_area_script
+  
+    INT_VAR extend_top = 0
+    STR_VAR area       = ""
+            script     = ""
+            tra_file   = ""
+  BEGIN
+            
+    // make sure we have area scripts assigned
+    COPY_EXISTING ~%area%.are~ ~override~
+      READ_ASCII 0x94 a_script
+      PATCH_IF ("%script%" STRING_COMPARE_CASE ~~ = 0) BEGIN // if blank
+        PATCH_IF GAME_IS ~tutu tutu_totsc~ BEGIN // if Tutu
+          WRITE_ASCIIE 0x95 ~%SOURCE_RES%~ #7
+          WRITE_ASCII  0x94 ~_ar~
+        END ELSE BEGIN // bgt
+          WRITE_ASCIIE 0x94 ~%SOURCE_RES%~ #8
+        END
+        READ_ASCII 0x94 a_script
+      END
+      BUT_ONLY
+    
+<<<<<<<< ./inlined-macro/cd_extend_bg_area_script.tpa
+EXTEND_BOTTOM ~%a_script%.bcs~ ~%script%.baf~ EVALUATE_BUFFER USING ~%tra_file%~ 
+>>>>>>>>
+  
+    ACTION_IF extend_top = 1 THEN BEGIN
+  
+      COPY ~./inlined-macro/cd_extend_bg_area_script.tpa~ ~./inlined-macro/cd_extend_bg_area_script.tpa~
+        REPLACE_TEXTUALLY ~^EXTEND_BOTTOM~ ~EXTEND_TOP~
+  
+    END
+    
+    ACTION_IF ("%tra_file%" STRING_COMPARE_CASE "" = 0) THEN BEGIN
+  
+      COPY ~./inlined-macro/cd_extend_bg_area_script.tpa~ ~./inlined-macro/cd_extend_bg_area_script.tpa~
+        REPLACE_TEXTUALLY ~ EVALUATE_BUFFER USING ~ ~ EVALUATE_BUFFER // USING ~
+  
+    END
+    
+    REINCLUDE ~./inlined-macro/cd_extend_bg_area_script.tpa~
+  
+  END
+
+END
+
+// bg1npc also maintains libraries for dream scripts, fluid states, and some other goodies, but they're not needed for Tweaks

@@ -1,0 +1,57 @@
+IF
+GlobalGT("A#MURNRETURN","GLOBAL",2)
+Global("A#prep","LOCALS",0)
+See(NearestEnemyOf(Myself))
+THEN
+RESPONSE #100
+ReallyForceSpellRES("A#GHAUN4",Myself)
+ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+SetGlobal("A#prep","LOCALS",1)
+END
+
+IF
+ActionListEmpty()
+HaveSpell(WIZARD_MELF_ACID_ARROW)
+See(NearestEnemyOf(Myself))
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),WIZARD_MELF_ACID_ARROW)
+END
+
+IF
+ActionListEmpty()
+HaveSpell(WIZARD_LARLOCH_MINOR_DRAIN)
+See(NearestEnemyOf(Myself))
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),WIZARD_LARLOCH_MINOR_DRAIN)
+END
+
+IF
+ActionListEmpty()
+!HaveSpell(WIZARD_MELF_ACID_ARROW)
+!HaveSpell(WIZARD_LARLOCH_MINOR_DRAIN)
+See(NearestEnemyOf(Myself))
+Global("A#change","LOCALS",0)
+THEN
+RESPONSE #100
+ForceSpell(NearestEnemyOf(Myself),WIZARD_STINKING_CLOUD)
+ReallyForceSpellRES("A#GHAUN1",Myself)
+SetGlobal("A#change","LOCALS",1)
+Attack(NearestEnemyOf(Myself))
+END
+
+
+IF
+GlobalGT("A#MURNRETURN","GLOBAL",2)
+Global("A#change","LOCALS",0)
+HPPercentLT(Myself,50)
+See(NearestEnemyOf(Myself))
+THEN
+RESPONSE #100
+ReallyForceSpellRES("A#GHAUN1",Myself)
+SetGlobal("A#change","LOCALS",1)
+Attack(NearestEnemyOf(Myself))
+END
+

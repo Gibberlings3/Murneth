@@ -1,0 +1,90 @@
+@0 = ~Nowa przylaczalna postac dla TuTu i Baldur's Gate Trylogy (WeiDU) - Mur'Neth~
+@1 = ~Zmiana kszta³tu: szlam~
+@2 = ~Zmiana kszta³tu: cz³owiek~
+@3 = ~Parali¿uj¹cy dotyk~
+@4 = ~Ghaunadan~
+@5 = ~Ghaunadan~
+@6 = ~GHAUNADAN: Te pod³e i jednoczeœnie inteligentne bestie s¹ lojalnymi s³ugami Ghaunadaura - z³ego boga zmutowanych œluzów, mazi, puddingów i niektórych drowów. Ghaunadanie s¹ dosyæ podobni do œluzów, jednak s¹ o wiele bardziej sprytni i inteligentni, ponadto potrafi¹ przemieniaæ siê w postaæ humanoidaln¹. Staraj¹ siê, by ta postaæ by³a w miarê atrakcyjna, uzupe³niaj¹ to podstawow¹ znajomoœci¹ magii zauroczeñ, i dziêki temu mimo swej odmiennoœci (któr¹ mimo wszystko staraj¹ siê ukrywaæ), nie maj¹ wiêkszych problemów z kontaktami miêdzyludzkimi. W naturalnej formie Ghaunadanie s¹ œluzowatymi istotami takimi jak galareta musztardowa, czy zielona maŸ.
+
+Mimo, ¿e przedstawiciele tej rasy trac¹ wiele z przydatnych z³odziejskich zdolnoœci, posiadaj¹ swe w³asne unikalne zdolnoœci takie jak ich specjalne, urokliwe spojrzenie czy te¿ odpornoœci.
+
+Zalety:
+- Raz dziennie na ka¿de 2 poziomy doœwiadczenia mo¿e u¿yæ zdolnoœci 'Przyjaciele', dzia³aj¹cej jak 1-poziomowe zaklêcie maga o tej samej nazwie
+- Odpornoœæ na trucizny, choroby, oœlepienie, sen, parali¿ i og³uszenia. Ponadto posiada 10% odpornoœci na obra¿enia obuchowe.
+- Raz dziennie na ka¿de 3 poziomy doœwiadczenia mo¿e u¿yæ zdolnoœci 'Parali¿uj¹cy dotyk'
+- Raz dziennie na ka¿de 5 poziomów doœwiadczenia mo¿e u¿yæ zdolnoœci 'Zmiana kszta³tu: szlam'
+
+Zdolnoœci:
+- Parali¿uj¹cy dotyk: Zdolnoœæ ta umo¿liwia Ghaunadaurianowi na zadanie specjalnego ataku, który sparali¿uje jego przeciwnika. Atak ten musi byæ wykonany w ci¹gu 5 nastêpnych rund. Jeœli z³odziej nie trafi przeciwnika - zdolnoœæ zostaje zmarnowana. Jednak trafienie zadaje przeciwnikowi 1K6 obra¿eñ i wymusza na nim rzut obronny przeciwko truciznom (modyfikator -2), zaœ jeœli mu siê nie uda go wykonaæ - zostaje unieruchomiony na 5 rund.
+- Zmiana kszta³tu, szlam: Zdolnoœæ ta pozwala na zmianê w naturaln¹ formê œluzu. Kiedy postaæ jest w tej formie ka¿dy atak jest parali¿uj¹cy (tak jak przy u¿yciu zdolnoœci 'Parali¿uj¹cy dotyk'). Nie ma limitu wzglêdem czasu wystêpowania w tej formie.
+
+Wady:
+- Otrzymuje tylko 15% zdolnoœci z³odziejskich na poziom
+- Nie mo¿e zastawiaæ pu³apek~
+@7 = ~Mur'Neth~
+@8 = ~Witam... Jesstem Mur'Neth.~ [A#MURN00]
+@9 = ~Ja tu jeszcze wrócê! PóŸniej...~ [A#MURN01]
+@10 = ~Wykonywanie woli Ghaunadaura jest zaszczytem dla tej dru¿yny.~ [A#MURN02]
+@11 = ~Twe czyny s¹... dziwne.~ [A#MURN03]
+@12 = ~Twe czyny s¹ niemi³e Ghaunadaurowi.~ [A#MURN04]
+@13 = ~Gaaaaahhh!! Ghaunadaur przeklina was wszystkich! Nie mogê tu zostaæ ani chwili d³u¿ej!~ [A#MURN05]
+@14 = ~W imiê Ghaunadaura, poprowadzê was do chwa³y!~ [A#MURN06]
+@15 = ~Ju¿ czas na modlitwy i spoczynek...~ [A#MURN07]
+@16 = ~Bezczynnoœæ nikomu nie s³u¿y!~ [A#MURN08]
+@17 = ~Na chwa³ê Ghaunadaura!~ [A#MURN09]
+@18 = ~IdŸ do Otch³ani!~ [A#MURN10]
+@19 = ~Poznaj lodowaty uœcisk œmierci!~ [A#MURN11]
+@20 = ~Sssslkkk!!!~ [A#MURN12]
+@21 = ~~ [A#MURN13]
+@22 = ~~ [A#MURN14]
+@23 = ~Slll.... Przyszed³ czas na ukojenie moich ran...~ [A#MURN15]
+@24 = ~Mech, b³oto... nawet tutaj Ghaunadaur ma swoje wierne s³ugi.~ [A#MURN16]
+@25 = ~Miasta to doskona³e kryjówki dla s³ug Ghaunadaura...~ [A#MURN17]
+@26 = ~Ach.. jakie wspania³e miejsce!~ [A#MURN18]
+@27 = ~Jest jasno, ale dla mnie nie ma to najmniejszego znaczenia.~ [A#MURN19]
+@28 = ~Wolê ciemn¹ noc. Jest o wiele ch³odniej...~ [A#MURN20]
+@29 = ~gthrrr...~ [A#MURN21]
+@30 = ~Tak?~ [A#MURN22]
+@31 = ~Wsssywa³eœ mnie...~ [A#MURN23]
+@32 = ~Ss³ucham?~ [A#MURN24]
+@33 = ~Ssss³ysza³em ciê!~ [A#MURN25]
+@34 = ~ssssschlrr...~ [A#MURN26]
+@35 = ~Bardzo dobrze.~ [A#MURN27]
+@36 = ~Jak sssobie ¿yczysz.~ [A#MURN28]
+@37 = ~W imiê Ghaunadaura!~ [A#MURN29]
+@38 = ~Prosta rzecz.~ [A#MURN30]
+@39 = ~flllrrr...~ [A#MURN31]
+@40 = ~kssss...~ [A#MURN32]
+@41 = ~W sswoim czasie... tak s¹dze.~ [A#MURN33]
+@42 = ~S³u¿ê Ghaunadaurowi, nie tobie! Zostaw mnie!~ [A#MURN34]
+@43 = ~Jestem ju¿ zmêczony tym ci¹g³ym klepaniem mnie po ramieniu... Nie ¿ebym naprawdê mia³ ramiê.. hmmm...~ [A#MURN35]
+@44 = ~Giñ, robaku...~ [A#MURN36]
+@45 = ~Arrrppp!~ [A#MURN37]
+@46 = ~T-to niemo¿liwe!~ [A#MURN38]
+@47 = ~Sam dŸwigaj te œmieci!~ [A#MURN39]
+@48 = ~Ku chwale Ghaunadaura og³aszam siê w³adz¹ tego wszystkiego.~ [A#MURN40]
+@49 = ~Oni nie powinni nawet wiedzieæ co ich uderzy³o...~ [A#MURN41]
+@50 = ~Œœœsswiêtokradztwo!~ [A#MURN42]
+@51 = ~Stój daleko ode mnie.~ [A#MURN43]
+@52 = ~Kiedy pytasz go o przesz³oœæ, MUR'NETH obraca siê ku tobie i wydaje z siebie dziwne, d³ugie sykniêcie. Chocia¿ jego naturaln¹ form¹ jest œluz, czuje siê bardziej komfortowo podaj¹c siê za humanoida p³ci mêskiej.
+
+W jego s³owach wyczytujesz szczere i g³êbokie oddanie dla Ghaunadaura - stwórcy jego rasy. Mur'Neth mówi, ¿e to typowe dla jego rasy - ¿yj¹ tylko po to, by s³u¿yæ swemu panu. Mur'Neth zosta³ stworzony tylko po to by przeprowadziæ dochodzenie w sprawie zatrucia rud ¿elaza w kopalni w Nashkel, co spowodowa³o œmieræ wielu œluzów i szlamów, które od wieków zamieszkiwa³y te ziemie. Tak mocno to rozgniewa³o Ghaunadaura, ¿e zezwoli³ Mur'Nethowi na podró¿owanie z grup¹ humanoidów... Przynajmniej na pewien czas.~
+@53 = ~Prosimy nie wylaczac jeszcze tego okna, nacisnij ENTER.
+To pozwoli na dekompresje dzwiekow.~
+@54 = ~Wykryto Indire, dodaje bantery...~
+@55 = ~Wykryto Finch, dodaje bantery...~
+@56 = ~Czas na MIÊSSSO!~ [GDOPP03]
+@57 = ~~ [GDOPP04]
+@58 = ~Pozory myl¹!~ [GDOPP01]
+@59 = ~Zabij siê sam - twoja œmieræ bêdzie mniej... bolesna.~ [GDOPP02]
+@60 = ~~ [DOPPL08]
+@61 = ~~ [DOPP08]
+@62 = ~~ [DOPP09]
+@63 = ~~ [DOPP05]
+@64 = ~~ [DOPPL09]
+@65 = ~Ghaunadaurian Czarownik~
+@66 = ~Ghaunadaurian Druid~
+@67 = ~~ [DOPPL05]
+@68 = ~~ [DOPPL04]
+@69 = ~Usun rzadkie dzwieki wybierania~
+@70 = ~Musisz zainstalowac Mur'Netha by wybrac ta opcje.~

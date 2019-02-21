@@ -1,0 +1,10 @@
+IF
+Global("A#SPAWNMURN","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("A#SPAWNMURN","GLOBAL",1)
+CreateCreature("A#MURN",[1086.2336],1)
+END
+
+
+

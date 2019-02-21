@@ -1,0 +1,52 @@
+IF
+GlobalGT("A#MURNRETURN","GLOBAL",2)
+Global("A#prep","LOCALS",0)
+See(NearestEnemyOf(Myself))
+THEN
+RESPONSE #100
+ReallyForceSpellRES("A#GHAUN4",Myself)
+SetGlobal("A#prep","LOCALS",1)
+Spell(Myself,CLERIC_DEFENSIVE_HARMONY)
+END
+
+IF
+ActionListEmpty()
+HaveSpell(CLERIC_SUMMON_INSECTS)
+See(NearestEnemyOf(Myself))
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),CLERIC_SUMMON_INSECTS)
+END
+
+IF
+ActionListEmpty()
+See(NearestEnemyOf(Myself))
+HaveSpell(CLERIC_CLOAK_OF_FEAR)
+HPGT(LastSeenBy(Myself),20)
+THEN
+RESPONSE #100
+Spell(Myself,CLERIC_CLOAK_OF_FEAR)
+END
+
+IF
+ActionListEmpty()
+HaveSpell(CLERIC_MASS_CURE)
+See(NearestEnemyOf(Myself))
+HPPercentLT(Myself,100)
+THEN
+RESPONSE #100
+Spell(Myself,CLERIC_MASS_CURE)
+END
+
+IF
+GlobalGT("A#MURNRETURN","GLOBAL",2)
+Global("A#change","LOCALS",0)
+HPPercentLT(Myself,50)
+See(NearestEnemyOf(Myself))
+THEN
+RESPONSE #100
+ReallyForceSpellRES("A#GHAUN1",Myself)
+SetGlobal("A#change","LOCALS",1)
+Attack(NearestEnemyOf(Myself))
+END
+

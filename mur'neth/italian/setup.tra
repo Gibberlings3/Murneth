@@ -1,0 +1,86 @@
+@0 = ~Mur'Neth NPC mod per Baldur's Gate Tutu o Baldur's Gate Trilogy-WeiDU~
+@1 = ~Mutaforma: melma~
+@2 = ~Mutaforma: umano~
+@3 = ~Tocco della Melma~
+@4 = ~ghaunadan~
+@5 = ~Ghaunadan~
+@6 = ~GHAUNADAN: Questi disgustosi ma intelligenti mostri sono i fedeli servitori di Ghaunadaur, la divinità malvagia venerata dalle melme, dalle fanghiglie, dalle gelatine e da alcuni drow. I Ghaunadan sono simili alle melme, ma sono esseri intelligenti e possono far prendere al loro corpo la forma di un attraente umanoide. Nella loro forma naturale, un ghaunadan somiglia ad una melma ed ha l'aspetto simile ad una gelatina gialla o ad una fanghiglia verde.
+
+I Ghaunadan sono privi di molti dei vantaggi tipici dei ladri, ma non per questo gli sono inferiori in quanto possiedono delle abilità uniche, come il loro sguardo affascinante o le loro resistenze uniche.
+
+Vantaggi:
+-  Può lanciare Amicizia una volta al giorno ogni 2 livelli.
+-  Immunità alla cecità, al veleno, alla malattia, al sonno, alla paralisi e allo stordimento. In aggiunta hanno il 10% di resistenza al danno contundente.
+-  Può utilizzare l'attacco Tocco della Melma una volta al giorno ogni 3 livelli. Questa abilità dura per 5 round. L'attacco produce 1d6 di danno e il bersaglio deve effettuare un tiro salvezza contro il veleno a -2 o rimanere bloccato per 5 round.
+-  Può trasformarsi da melma in umano e viceversa una volta al giorno ogni 5 livelli. Mentre è nella forma di una melma, tutti gli attacchi del personaggio sono paralizzanti. Non ci sono limiti di tempo per rimanere trasformati in entrambe le forme.
+
+Svantaggi:
+-  Può distribuire solo 15 punti abilità ad ogni livelli.
+-  Non può piazzare trappole.~
+@7 = ~Mur'Neth~
+@8 = ~Salve... io sono Mur'Neth.~ [A#MURN00]
+@9 = ~Io *tornerò*! Più tardi...~ [A#MURN01]
+@10 = ~E' un onore per questo gruppo fare la volontà di Ghaunadaur.~ [A#MURN02]
+@11 = ~Le tue azioni non mi piacciono.~ [A#MURN03]
+@12 = ~Le tue azioni non si attengono alla volontà di Ghaunadaur.~ [A#MURN04]
+@13 = ~Ghaunadaur ti maledice! Non credo che rimarrò qui ancora per molto!~ [A#MURN05]
+@14 = ~Nel nome di Ghaunadaur, porterò tutti noi alla gloria!~ [A#MURN06]
+@15 = ~E' tempo di riposare, e pregare...~ [A#MURN07]
+@16 = ~Questa inoperosità non serve a nessuno!~ [A#MURN08]
+@17 = ~Per Ghaunadaur!~ [A#MURN09]
+@18 = ~Negli Abissi con te!~ [A#MURN10]
+@19 = ~Conoscerai l'abbraccio oscuro della morte!~ [A#MURN11]
+@20 = ~sssslkkk!!!~ [A#MURN12]
+@21 = ~~ [A#MURN13]
+@22 = ~~ [A#MURN14]
+@23 = ~Le ferite guariscono con il tempo...~ [A#MURN15]
+@24 = ~Il muschio, le lumache... Anche qui Ghaunadaur ha i suoi servitori.~ [A#MURN16]
+@25 = ~Le città sono nascondigli perfetti per i servitori di Ghaunadaur...~ [A#MURN17]
+@26 = ~Ah, stiamo in un luogo glorioso!~ [A#MURN18]
+@27 = ~Mi si dice che stiamo di giorno, ma simili cose non hanno senso per uno come me.~ [A#MURN19]
+@28 = ~Preferisco le ore notturne. Fa molto più fresco...~ [A#MURN20]
+@29 = ~gthrrr...~ [A#MURN21]
+@30 = ~Siii?~ [A#MURN22]
+@31 = ~Sento la tua chiamata...~ [A#MURN23]
+@32 = ~Cosa c'é?~ [A#MURN24]
+@33 = ~Ti sento!~ [A#MURN25]
+@34 = ~ssssschlrr...~ [A#MURN26]
+@35 = ~Molto bene.~ [A#MURN27]
+@36 = ~Come desideri.~ [A#MURN28]
+@37 = ~In nome di Ghaunadaur!~ [A#MURN29]
+@38 = ~Una cosa semplice.~ [A#MURN30]
+@39 = ~flllrrr...~ [A#MURN31]
+@40 = ~kccccccch...~ [A#MURN32]
+@41 = ~Ho in *miei* tempi, credo...~ [A#MURN33]
+@42 = ~Io servo Ghaunadaur, non te! Lasciami stare!~ [A#MURN34]
+@43 = ~Mi sono stancato dei tuoi ripetuti colpi sulle mie spalle... Anche se io non posso dire che *abbia* davvero delle spalle... Hmm...~ [A#MURN35]
+@44 = ~Muori, verme...~ [A#MURN36]
+@45 = ~Arrrppp!~ [A#MURN37]
+@46 = ~Questo é... Non è possibile!~ [A#MURN38]
+@47 = ~Portati tu la tua stessa spazzatura!~ [A#MURN39]
+@48 = ~Per la gloria di Ghaunadaur, ora è il mio turno.~ [A#MURN40]
+@49 = ~Non sapranno mai cosa li ha colpiti...~ [A#MURN41]
+@50 = ~Sacrilegio!~ [A#MURN42]
+@51 = ~Stai lontano.~ [A#MURN43]
+@52 = ~Quando gli domandi del suo passato, MUR'NETH si gira verso di te e fa uscire un lungo e distorto gorgoglio. Benché la sua vera forma sia quella di una melma, sembra apprezzare il fatto di essere considerato come un maschio.
+
+Dalle sue parole riesci a raccogliere una profonda devozione nei confronti del suo dio Ghaunadaur, il creatore della sua razza. Mur'Neth ti rivela che è normale per quelli della sua razza - davvero loro vivono al suo servizio. Mur'Neth è stato generato solo recentemente per investigare sulla contaminazione del minerale metallifero nelle Miniere di Nashkel, nelle quali sono risultate esserci state diverse morti di melme e di muffe native. Di tutto ciò Ghaunadaur è molto irritato, ed è per tutto questo che, probabilmente, Ghaunadaur ha permesso a Mur'Neth di accompagnarti per ora...~
+@53 = ~Per favore non premere Esc per uscire dalla finestra, per uscire premi Enter invece.
+Questo per permettere la decompressione dei suoni audio.~
+@54 = ~Hai Indira installato, aggiungi gli extra banter...~
+@55 = ~Hai Finch installato, aggiungi gli extra banter...~
+@56 = ~E' ora di un po' di CARNE!~ [GDOPP03]
+@57 = ~~ [GDOPP04]
+@58 = ~A volte le apparenze ingannano, allocchi!~ [GDOPP01]
+@59 = ~Arrendetevi, la morte sarà meno . . . dolorosa.~ [GDOPP02]
+@60 = ~~ [DOPPL08]
+@61 = ~~ [DOPP08]
+@62 = ~~ [DOPP09]
+@63 = ~~ [DOPP05]
+@64 = ~~ [DOPPL09]
+@65 = ~Mago Ghaunadan~
+@66 = ~Druido Ghaunadan~
+@67 = ~~ [DOPPL05]
+@68 = ~~ [DOPPL04]
+@69 = ~Rimuovi la Rara selezione dei suoni~
+@70 = ~Hai bisogno di Mur'Neth installato per selezionare questa opzione.~

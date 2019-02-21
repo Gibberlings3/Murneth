@@ -1,0 +1,492 @@
+BACKUP ~mur'neth/backup~
+SUPPORT ~http://gibberlings3.net/forums/index.php?showforum=50~
+
+VERSION ~v12~
+
+README ~mur'neth/readme-murneth.html~
+
+ALWAYS
+
+  ACTION_IF NOT GAME_IS ~tutu tutu_totsc bgt bgee eet~ THEN BEGIN FAIL @100 END
+  
+  ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN FAIL @101 END // Modmerge check
+
+  ACTION_IF NOT VARIABLE_IS_SET ee_game THEN BEGIN
+
+    ACTION_IF GAME_IS ~bgt tutu tutu_totsc~ THEN BEGIN
+
+      OUTER_SET ee_game = 0 // just do this once per install
+
+      ACTION_FOR_EACH file IN iplot01k.itm iplot04g.itm iplot04h.itm iplot04i.itm xr2400.are xr2600.are BEGIN
+        DISABLE_FROM_KEY "%file%"
+      END
+
+    END ELSE BEGIN
+
+      OUTER_SET ee_game = 1 // just do this once per install
+
+      // convert strings to UTF-8 for BGEE/BG2EE
+      ACTION_DEFINE_ARRAY cdreload BEGIN setup END
+      LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~mur'neth~ reload_array = cdreload END
+
+	END
+	  
+  END
+
+END
+
+AUTO_TRA ~mur'neth/%s~
+
+LANGUAGE ~English~
+	 ~english~
+	 ~mur'neth/english/setup.tra~
+LANGUAGE ~French par Egrevyn des D'Oghmatiques~
+	 ~French~
+	 ~mur'neth/english/setup.tra~
+	 ~mur'neth/french/setup.tra~
+LANGUAGE ~Polish (Yarpen)~
+	 ~Polish~
+	 ~mur'neth/english/setup.tra~
+	 ~mur'neth/Polish/setup.tra~
+LANGUAGE ~Spanish (Saemon, Clan DLAN)~
+	 ~Spanish~
+	 ~mur'neth/english/setup.tra~
+	 ~mur'neth/Spanish/setup.tra~
+LANGUAGE ~German (Leonardo Watson)~
+	 ~German~
+	 ~mur'neth/english/setup.tra~
+	 ~mur'neth/German/setup.tra~
+LANGUAGE ~Italian (Ilot)~
+	 ~Italian~
+	 ~mur'neth/english/setup.tra~
+	 ~mur'neth/italian/setup.tra~
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// mur'neth                                         \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @0
+
+INCLUDE ~mur'neth/lib/g3_cpmvars_master.tpa~ // sets variables for all sorts of stuff
+INCLUDE ~mur'neth/lib/functions.tpa~ // nifty functions
+
+/////                                                  \\\\\
+///// miscellany and setup                             \\\\\
+/////                                                  \\\\\
+
+/* 2da appending for dialogues */
+APPEND ~pdialog.2da~  ~A#MURN A#MURNP A#MURNJ A#MURND~ UNLESS ~A#MURN~
+APPEND ~interdia.2da~ ~A#MURN BA#MURN~                 UNLESS ~A#MURN~
+
+// Area script assignments
+COPY_EXISTING ~%NashkelMines_L3%.ARE~ ~override~
+  WRITE_ASCIIE 0x94 ~%NashkelMines_L3_BCS%~ #8
+
+COPY_EXISTING ~%Undercity%.ARE~ ~override~
+  WRITE_ASCIIE 0x94 ~%Undercity_BCS%~ #8
+
+// portraits, bams, spells that don't need custom treatment
+MKDIR ~portraits~
+COPY ~mur'neth/portraits/A#Murnl.bmp~  ~portraits~
+     ~mur'neth/ghaunadan/A#GHAUN1.BAM~ ~override~
+     ~mur'neth/ghaunadan/A#GHAUN3.BAM~ ~override~
+     ~mur'neth/sounds/IMOEN28.wav~     ~override~
+     ~mur'neth/ghaunadan/A#GHAUN4.SPL~ ~override~ // kit bonuses
+
+ACTION_IF ee_game THEN BEGIN // bgee stuff
+
+  COPY ~mur'neth/portraits/A#Murnl.bmp~    ~override~
+       ~mur'neth/portraits/A#MurnM_ee.bmp~ ~override/A#MurnM.bmp~
+       ~mur'neth/portraits/A#MurnS_ee.bmp~ ~override/A#MurnS.bmp~
+       ~mur'neth/portraits/A#MurnM_ee.bmp~ ~portraits/A#MurnM.bmp~
+       ~mur'neth/portraits/A#MurnS_ee.bmp~ ~portraits/A#MurnS.bmp~
+
+  ADD_JOURNAL @9  USING ~mur'neth/%LANGUAGE%/a#murn.tra~
+  ADD_JOURNAL @23 USING ~mur'neth/%LANGUAGE%/a#murn.tra~
+  ADD_JOURNAL @25 USING ~mur'neth/%LANGUAGE%/a#murn.tra~
+
+END ELSE BEGIN
+
+  COPY ~mur'neth/portraits/A#MurnM.bmp~ ~portraits/A#MurnM.bmp~
+       ~mur'neth/portraits/A#MurnS.bmp~ ~portraits/A#MurnS.bmp~
+ 
+  APPEND ~ACTION.IDS~ ~31 SpellRES(S:RES*,O:Target*)~
+               UNLESS ~31 SpellRES(S:RES\*,O:Target\*)~
+  APPEND ~ACTION.IDS~ ~95 SpellPointRES(S:RES*,P:Target*)~
+               UNLESS ~95 SpellPointRES(S:RES\*,P:Target\*)~
+  APPEND ~ACTION.IDS~ ~113 ForceSpellRES(S:RES*,O:Target)~
+               UNLESS ~113 ForceSpellRES(S:RES\*,O:Target)~
+  APPEND ~ACTION.IDS~ ~114 ForceSpellPointRES(S:RES*,P:Target)~
+               UNLESS ~114 ForceSpellPointRES(S:RES\*,P:Target)~
+  APPEND ~ACTION.IDS~ ~147 RemoveSpellRES(S:Spell*)~
+               UNLESS ~147 RemoveSpellRES(S:Spell\*)~
+  APPEND ~ACTION.IDS~ ~160 ApplySpellRES(S:RES*,O:Target)~
+               UNLESS ~160 ApplySpellRES(S:RES\*,O:Target)~
+  APPEND ~ACTION.IDS~ ~181 ReallyForceSpellRES(S:RES*,O:Target)~
+               UNLESS ~181 ReallyForceSpellRES(S:RES\*,O:Target)~
+  APPEND ~ACTION.IDS~ ~191 SpellNoDecRES(S:RES*,O:Target*)~
+               UNLESS ~191 SpellNoDecRES(S:RES\*,O:Target\*)~
+  APPEND ~ACTION.IDS~ ~192 SpellPointNoDecRES(S:RES*,P:Target*)~
+               UNLESS ~192 SpellPointNoDecRES(S:RES\*,P:Target\*)~
+  APPEND ~ACTION.IDS~ ~240 ReallyForceSpellDeadRES(S:RES*,O:Target)~
+               UNLESS ~240 ReallyForceSpellDeadRES(S:RES\*,O:Target)~
+  APPEND ~ACTION.IDS~ ~318 ForceSpellRangeRES(S:RES*,O:Target)~
+               UNLESS ~318 ForceSpellRangeRES(S:RES\*,O:Target)~
+  APPEND ~ACTION.IDS~ ~319 ForceSpellPointRangeRES(S:RES*,P:Target)~
+               UNLESS ~319 ForceSpellPointRangeRES(S:RES\*,P:Target)~
+  APPEND ~ACTION.IDS~ ~337 ReallyForceSpellPointRES(S:RES*,P:Target*)~
+               UNLESS ~337 ReallyForceSpellPointRES(S:RES\*,P:Target\*)~
+
+  APPEND ~TRIGGER.IDS~ ~0x00A1 SpellCastOnMeRES(S:Spell*,O:Caster*)~
+                UNLESS ~0x00A1 SpellCastOnMeRES(S:Spell\*,O:Caster\*)~
+  APPEND ~TRIGGER.IDS~ ~0x0091 SpellCastRES(S:Spell*,O:Object*)~
+                UNLESS ~0x0091 SpellCastRES(S:Spell\*,O:Object\*)~
+  APPEND ~TRIGGER.IDS~ ~0x00A6 SpellCastPriestRES(S:Spell*,O:Object*)~
+                UNLESS ~0x00A6 SpellCastPriestRES(S:Spell\*,O:Object\*)~
+  APPEND ~TRIGGER.IDS~ ~0x00A7 SpellCastInnateRES(S:Spell*,O:Object*)~
+                UNLESS ~0x00A7 SpellCastInnateRES(S:Spell\*,O:Object\*)~
+  APPEND ~TRIGGER.IDS~ ~0x4031 HaveSpellRES(S:Spell*)~
+                UNLESS ~0x4031 HaveSpellRES(S:Spell\*)~
+  APPEND ~TRIGGER.IDS~ ~0x40D5 ActuallyInCombat()~
+                UNLESS ~0x40D5 ActuallyInCombat()~
+
+END
+
+/////                                                  \\\\\
+///// audio                                            \\\\\
+/////                                                  \\\\\
+
+LAF HANDLE_AUDIO STR_VAR audio_path = ~mur'neth/sounds~ oggdec_path = ~mur'neth/sounds~ sox_path = ~mur'neth/sounds~ END // install audio
+
+/////                                                  \\\\\
+///// spells                                           \\\\\
+/////                                                  \\\\\
+
+COPY ~mur'neth/ghaunadan/A#GHAUN1.SPL~ ~override~ // Shapeshift: ooze
+  SAY NAME1 @1
+  SAY NAME2 @1
+
+COPY ~mur'neth/ghaunadan/A#GHAUNP.SPL~ ~override~ // Shapeshift: human
+  SAY NAME1 @2
+  SAY NAME2 @2
+
+LAF cd_clone_spell INT_VAR make_innate = 1 STR_VAR source = SPWI107 destination = ~A#GHAUN2~ END // Friends
+
+COPY_EXISTING ~SPWI218.spl~ ~override/A#GHAUN3.spl~ //Ooze Touch
+  SAY NAME1 @3
+  SAY NAME2 @3
+  WRITE_SHORT 0x1C 4                         // sets spell type to innate (4)
+  WRITE_LONG  0x34 1                         // sets spell level to 1 to avoid scripting issues
+  WRITE_ASCII 0x3a ~spwi117b~ #8
+  LPF ALTER_SPELL_HEADER INT_VAR location = 4 STR_VAR icon = SPWI117B END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 111 STR_VAR resource = A#GHAUN3 END
+
+/////                                                  \\\\\
+///// items                                            \\\\\
+/////                                                  \\\\\
+
+COPY_EXISTING ~GHOULT.itm~ ~override/A#GHAUN1.itm~ // Ooze Touch weapon
+              ~GHOULT.itm~ ~override/A#GHAUN3.itm~ // Ooze Touch weapon
+  SAY NAME1 @3
+  SAY NAME2 @3
+  LPF ALTER_ITEM_HEADER INT_VAR dicesize = 6 dicenumber = 1 STR_VAR icon = EVAL "%DEST_RES%" END
+  LPF ALTER_EFFECT INT_VAR savingthrow = BIT2 savebonus = "-2" END
+
+/////                                                  \\\\\
+///// kit install                                      \\\\\
+/////                                                  \\\\\
+
+INCLUDE ~mur'neth/lib/fl#add_kit_ee.tpa~
+ADD_KIT ~A#GHAUN~
+  ~A#GHAUN                 1           1           1           1           1           0           0           0~
+  ~A#GHAUN 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 1 0 1 0 0 0 0 1 1 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+  ~A#GHAUN	0	9	0	0	0	0~
+  ~A#GHAUN		0	0	0	0	0	0~
+  ~A#GHAUN		0	17	0	0	0	0~
+  ~A#GHAUN		0	15	0	0	0	0~
+  ~A#GHAUN		0	0	0	0	0	0	0	0	1~
+  ~A#GHAUN		0	0	0	0	0	0~
+  ~mur'neth/ghaunadan/A#GHAUN.2da~
+  ~~
+  ~0x00040000	4~
+  ~th0~
+  ~CHAN09 * HELM07 BAG20 RING06 RING21 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+  SAY @4
+  SAY @5
+  SAY @6
+  LAF fl#add_kit_ee STR_VAR kit_name = ~A#GHAUN~ thiefskl = ~40 15~ thiefscl = ~100 100 100 100 100 100 0 0~ END // no traps, only 15 points/level
+  
+/////                                                  \\\\\
+///// creatures                                        \\\\\
+/////                                                  \\\\\
+
+COPY_EXISTING ~JELLMU.CRE~ ~override/A#GHAUN.CRE~
+  REPLACE_CRE_ITEM ~A#GHAUN1~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+
+// Creature copying and naming
+COPY ~mur'neth/creatures/A#FMURN.CRE~ ~override~
+     ~mur'neth/creatures/A#murn.CRE~  ~override~
+  SAY NAME1 @7
+  SAY NAME2 @7
+  WRITE_SHORT 0x244 0
+  WRITE_SHORT 0x246 (0x4000 + ~%A#GHAUN%~)
+  WRITE_ASCII 0x248 ~A#MURN~ #8 // override
+  WRITE_ASCII 0x2cc ~A#MURN~ #8 // dialogue
+  SAY INITIAL_MEETING @8
+  SAY MORALE @9
+  SAY HAPPY @10
+  SAY UNHAPPY_ANNOYED @11
+  SAY UNHAPPY_SERIOUS @12
+  SAY UNHAPPY_BREAKING @13
+  SAY LEADER @14
+  SAY TIRED @15
+  SAY BORED @16
+  SAY BATTLE_CRY1 @17
+  SAY BATTLE_CRY2 @18
+  SAY BATTLE_CRY3 @19
+  SAY BATTLE_CRY4 @20
+  SAY DAMAGE @21
+  SAY DYING @22
+  SAY HURT @23
+  SAY AREA_FOREST @24
+  SAY AREA_CITY @25
+  SAY AREA_DUNGEON @26
+  SAY AREA_DAY @27
+  SAY AREA_NIGHT @28
+  SAY SELECT_COMMON1 @29
+  SAY SELECT_COMMON2 @30
+  SAY SELECT_COMMON3 @31
+  SAY SELECT_COMMON4 @32
+  SAY SELECT_COMMON5 @33
+  SAY SELECT_COMMON6 @34
+  SAY SELECT_ACTION1 @35
+  SAY SELECT_ACTION2 @36
+  SAY SELECT_ACTION3 @37
+  SAY SELECT_ACTION4 @38
+  SAY SELECT_ACTION5 @39
+  SAY SELECT_ACTION6 @40
+  SAY SELECT_ACTION7 @41
+  SAY SELECT_RARE1 @42
+  SAY SELECT_RARE2 @43
+  SAY CRITICAL_HIT @44
+  SAY CRITICAL_MISS @45
+  SAY TARGET_IMMUNE @46
+  SAY INVENTORY_FULL @47
+  SAY PICKED_POCKET @48
+  SAY HIDDEN_IN_SHADOWS @49
+  SAY SPELL_DISRUPTED @50
+  SAY SET_A_TRAP @51
+  SAY BIO @52
+  PATCH_IF !GAME_IS ~tutu tutu_totsc~ BEGIN // replace tutu items with regular; a#fmurn adjusted below
+    REPLACE_CRE_ITEM ~LEAT04~ #0  #0 #0 ~NONE~ ~ARMOR~
+    REPLACE_CRE_ITEM ~SHLD08~ #0  #0 #0 ~NONE~ ~SHIELD~
+    REPLACE_CRE_ITEM ~BLUN01~ #0  #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+    REPLACE_CRE_ITEM ~DAGG05~ #25 #0 #0 ~NONE~ ~WEAPON2~
+  END
+
+COPY_EXISTING ~A#FMURN.CRE~ ~override~
+  WRITE_ASCII DEATHVAR ~A#FMURN~ #8
+  WRITE_ASCII DIALOG ~A#FMURN~ #8
+  WRITE_ASCII SCRIPT_OVERRIDE ~A#FMURN~ #8
+  PATCH_IF !GAME_IS ~tutu tutu_totsc~ BEGIN // replace tutu items with regular; a#fmurn adjusted below
+    REPLACE_CRE_ITEM ~LEAT07~ #0  #0 #0 ~NONE~ ~ARMOR~
+    REPLACE_CRE_ITEM ~SHLD17~ #0  #0 #0 ~NONE~ ~SHIELD~
+    PATCH_IF GAME_IS BGEE BEGIN
+      REPLACE_CRE_ITEM ~BLUN37~ #0  #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~WEAPON1~ EQUIP // blackblood not in bgee so use +2 club
+    END ELSE BEGIN
+      REPLACE_CRE_ITEM ~BLUN22~ #0  #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~WEAPON1~ EQUIP // othewise blackblood
+    END
+  END
+
+COPY ~mur'neth/creatures/A#FSOR.CRE~ ~override/A#FSOR.CRE~
+     ~mur'neth/creatures/A#FDRU.CRE~ ~override/A#FDRU.CRE~
+  SAY NAME1 @65
+  SAY NAME2 @65
+  WRITE_ASCII SCRIPT_OVERRIDE ~A#FSOR~
+  WRITE_ASCII DEATHVAR ~A#FSOR~
+  WRITE_ASCII DIALOG ~A#FSOR~
+  SAY INITIAL_MEETING @56
+  SAY MORALE ~~
+  SAY BATTLE_CRY1 @57
+  SAY BATTLE_CRY2 @58
+  SAY BATTLE_CRY3 @56
+  SAY BATTLE_CRY4 @57
+  SAY BATTLE_CRY5 @57
+  SAY DAMAGE @61
+  SAY DYING @62
+  SAY HURT ~~
+  SAY ATTACK1 @63
+  SAY SELECT_COMMON1 @58
+  SAY SELECT_COMMON2 @59
+  SAY SELECT_COMMON3 @56
+  SAY SELECT_COMMON4 @57
+  SAY SELECT_COMMON5 ~~
+  SAY SELECT_COMMON6 ~~
+  SAY SELECT_ACTION1 ~~
+  SAY SELECT_ACTION2 ~~
+  SAY SELECT_ACTION3 ~~
+  SAY SELECT_ACTION4 ~~
+  SAY SELECT_ACTION5 ~~
+  SAY SELECT_ACTION6 ~~
+  SAY SELECT_ACTION7 ~~
+  SAY SELECT_RARE1 ~~
+  SAY SELECT_RARE2 ~~
+  SAY CRITICAL_HIT ~~
+  SAY CRITICAL_MISS ~~
+  SAY TARGET_IMMUNE ~~
+  SAY INVENTORY_FULL ~~
+  SAY PICKED_POCKET ~~
+  SAY HIDDEN_IN_SHADOWS ~~
+  SAY SPELL_DISRUPTED ~~
+  PATCH_IF !GAME_IS ~tutu tutu_totsc~ BEGIN // replace tutu items with regular; a#FDRU adjusted below
+    REPLACE_CRE_ITEM ~CLCK17~ #0  #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~ARMOR~
+    REPLACE_CRE_ITEM ~DAGG03~ #0  #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+  END
+
+COPY_EXISTING ~A#FDRU.CRE~ ~override~
+  SAY NAME1 @66
+  SAY NAME2 @66
+  WRITE_ASCII SCRIPT_OVERRIDE ~A#FDRU~
+  WRITE_ASCII DEATHVAR ~A#FDRU~
+  WRITE_ASCII DIALOG ~A#FDRU~
+  PATCH_IF !GAME_IS ~tutu tutu_totsc~ BEGIN // replace tutu items with regular
+    REPLACE_CRE_ITEM ~LEAT07~ #0  #0 #0 ~NONE~ ~ARMOR~
+    REPLACE_CRE_ITEM ~SW1H22~ #0  #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+  END
+
+/////                                                  \\\\\
+///// dialogue                                         \\\\\
+/////                                                  \\\\\
+
+// Checking for and creating imoen's banter, if needed
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~%IMOEN_BANTER%.DLG~ THEN BEGIN
+  <<<<<<<<...inlined/cd#init_dlg.d
+  BEGIN ~%IMOEN_BANTER%~
+  >>>>>>>>
+  COMPILE ~...inlined/cd#init_dlg.d~ EVAL
+END
+
+//Dialogue compilation
+COMPILE ~mur'neth/dialogues/A#MURN.d~
+        ~mur'neth/dialogues/BA#MURN.d~
+        ~mur'neth/dialogues/A#MURNJ.d~
+        ~mur'neth/dialogues/A#MURNP.d~
+        ~mur'neth/dialogues/A#INTS.d~ EVALUATE_BUFFER
+
+/* Mur'Neth-Indira banter */
+ACTION_IF ((FILE_EXISTS_IN_GAME ~J#INDIB.DLG~) AND (NOT FILE_EXISTS ~override/INDIRAMURNETH.XXX~)) THEN BEGIN
+
+  PRINT @54
+  COPY_EXISTING ~SW1H01.ITM~ ~override/INDIRAMURNETH.XXX~
+  COMPILE ~mur'neth/dialogues/A#MURIND.d~ EVALUATE_BUFFER
+
+END
+
+/* Mur'Neth-Finch banter */
+ACTION_IF ((FILE_EXISTS_IN_GAME ~BSUFINCH.DLG~) AND (NOT FILE_EXISTS ~override/FINCHMURNETH.XXX~)) THEN BEGIN
+
+  PRINT @55
+  COPY_EXISTING ~SW1H01.ITM~ ~override/FINCHMURNETH.XXX~
+  COMPILE ~mur'neth/dialogues/A#MURFIN.d~ EVALUATE_BUFFER
+
+END
+
+/////                                                  \\\\\
+///// scripts                                          \\\\\
+/////                                                  \\\\\
+
+// script compilation
+COMPILE ~mur'neth/scripts/A#MURN.baf~ EVALUATE_BUFFER
+
+// Script extension
+EXTEND_BOTTOM ~%NashkelMines_L3_BCS%.bcs~ ~mur'neth/scripts/A#AR5403.baf~
+EXTEND_BOTTOM ~%Undercity_BCS%.BCS~       ~mur'neth/scripts/finale.baf~ EVALUATE_BUFFER
+
+COMPILE ~mur'neth/scripts/A#FMURN.baf~
+        ~mur'neth/scripts/A#FSOR.baf~
+        ~mur'neth/scripts/A#FDRU.baf~ EVALUATE_BUFFER
+
+COMPILE ~mur'neth/dialogues/A#FMURN.d~ EVALUATE_BUFFER
+
+/////                                                  \\\\\
+///// compatibility roundup                            \\\\\
+/////                                                  \\\\\
+
+ACTION_IF ee_game THEN BEGIN// BGEE
+
+  COPY_EXISTING ~kitlist.2da~ ~override~  // change usability back to bogstandard thief
+    REPLACE_TEXTUALLY ~^\([0-9]+[ %TAB%]+A#GHAUN[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+A#GHAUN[ %TAB%]+[0-9]+[ %TAB%]+\)0x00040000\([ %TAB%]+[0-9]+\)~ ~\1 0x00004000 \2~
+    PRETTY_PRINT_2DA
+
+  ACTION_IF GAME_IS BGEE THEN BEGIN// BGEE
+
+    // bgee has different strings for 'sleep' and whatnot, so immunities need to be adjusted
+    COPY_EXISTING ~A#GHAUN4.spl~ ~override~
+      LPF DELETE_SPELL_EFFECT INT_VAR opcode_to_delete = 267 END
+      PATCH_FOR_EACH parameter1 IN 26103 31772 31799 25866 14650 26019 26018 26453 31238 25425 26215 17399 31786 26352 26371 26050 25862 BEGIN
+        LPF ADD_SPELL_EFFECT INT_VAR opcode = 267 target = 1 timing = 9 parameter1 END
+      END
+
+    // bgee has different strings for 'sleep' and whatnot, so immunities need to be adjusted
+    COPY_EXISTING ~a#fmurn.cre~  ~override~
+      LPF DELETE_CRE_EFFECT INT_VAR opcode_to_delete = 267 END
+      PATCH_FOR_EACH parameter1 IN 26103 31772 31799 25866 14650 26019 26018 26453 31238 25425 26215 17399 31786 26352 26371 26050 25862 BEGIN
+        LPF ADD_CRE_EFFECT INT_VAR opcode = 267 target = 1 timing = 9 parameter1 END
+      END
+
+  END	  
+	  
+END
+
+// corrections to BGT creatures and references
+ACTION_IF GAME_IS BGT THEN BEGIN // BGT
+
+  COPY_EXISTING ~A#FSOR.CRE~ ~override~
+                ~A#FDRU.CRE~ ~override~
+    SAY DAMAGE @60
+    SAY DYING @64
+    SAY ATTACK1 @67
+    SAY SELECT_COMMON4 @68
+
+END
+
+ACTION_IF FILE_EXISTS ~override/j#swsoa.txt~ THEN BEGIN// AoE check
+
+  COPY_EXISTING ~weapprof.2da~ ~override~
+    COUNT_2DA_COLS col_num
+    FOR (index = 0 ; index < 32 ; ++index) BEGIN
+      SET_2DA_ENTRY  index (col_num - 1) col_num 1 // allow one pip in everything
+    END
+    PRETTY_PRINT_2DA
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~cdtweaks/setup-cdtweaks.tp2~ ~1210~ THEN BEGIN // use bg walking speeds
+
+  COPY_EXISTING ~A#FMURN.CRE~ ~override~
+                ~A#murn.CRE~  ~override~
+                ~A#FSOR.CRE~  ~override~
+                ~A#FDRU.CRE~  ~override~
+    LPF ADD_CRE_EFFECT INT_VAR opcode = 176 target = 1 parameter1 = 0xfffffffd timing = 9 END
+    BUT_ONLY
+
+END
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Remove Rare Selection Sounds                     \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @69
+REQUIRE_COMPONENT ~mur'neth.tp2~ 0 @70
+
+COPY_EXISTING ~A#MURN.CRE~ ~override~
+  SAY SELECT_RARE1 @29
+  SAY SELECT_RARE2 @30

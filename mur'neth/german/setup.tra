@@ -1,0 +1,87 @@
+@0 = ~Der Mur'Neth NPC mod für Baldur's Gate Tutu von Baldur oder Baldur's Gate Trilogy-WeiDU ~
+@1 = ~Gestalt gewandelt: Schlamm ~
+@2 = ~Gestalt gewandelt: Mensch ~
+@3 = ~Schlamm-Berührung ~
+@4 = ~ghaunadan ~
+@5 = ~Ghaunadan ~
+@6 = ~GHAUNADAN: Diese abscheulichen, intelligenten Ungeheuer sind die loyalen Diener von Ghaunadaur, der bösen Gottheit, die von Schlamm, Schleim, Gelee und einigen Drow verehrt wird. Ghaunadans sind Schlamm ähnlich, aber sie sind ziemlich intelligent, und ihre Körper können die Gestalt eines attraktiven Humanoiden annehmen. In seiner natürlichen Form ähnelt ein Ghaunadan einem schlammartigen Wesen wie ockerfarbigem Gelee oder grüner Schleim.
+
+Ghaunadans mangelt es an vielen Vorteilen von Dieben, aber sie machen diese mit ihren eigenen einzigartigen Fähigkeiten wett, wie ihrem verzaubernden Blick und ihren einzigartigen Widerständen.
+
+Vorteile:
+- Kann für je 2 Stufen einmal pro Tag "Freunde" wirken.
+- Immun gegen Blindheit, Gift, Krankheit, Schlaf, Lähmung und Betäuben. Zusätzlich haben sie einen Widerstand von 10 % gegen Verprügeln.
+- Kann für je 3 Stufen einmal pro Tag einen Schlamm-Berührungsangriff machen. Diese Fähigkeit dauert für 5 Runden. Der Angriff verursacht 1W6 Schaden, und der Gegner muss einen Rettungswurf gegen Gift  bei -2 bestehen oder wird für 5 Runden festgehalten.
+- Kann für je 5 Stufen einmal pro Tag Gestalt wandeln zwischen Schlamm und menschlichen Formen. In der Schlamm-Form sind alle Angriffe des Charakters lähmend. Es gibt keine Zeitbegrenzung für die jeweilige Form.
+
+Nachteile:
+- Bekommt nur 15 Fähigkeitspunkte pro Stufe.
+- Kann keine hinterhältigen Angriffe ausführen.
+- Kann keine Fallen stellen. ~
+@7 = ~Mur'Neth ~
+@8 = ~Seid gegrüßt... Ich bin Mur'Neth. ~ [A#MURN00]
+@9 = ~Ich *werde* zurückkehren! Später... ~ [A#MURN01]
+@10 = ~Es ist eine Ehre für diese Gruppe, nach dem Willen von Ghaunadaur zu handeln. ~ [A#MURN02]
+@11 = ~Eure Handlungen erfreuen nicht. ~ [A#MURN03]
+@12 = ~Eure Handlungen folgen nicht dem Willen Ghaunadaurs. ~ [A#MURN04]
+@13 = ~Ghaunadaur verflucht Euch alle! Ich werde das nicht länger ertragen! ~ [A#MURN05]
+@14 = ~Im Namen von  Ghaunadaur, ich werde uns zu Ruhm führen! ~ [A#MURN06]
+@15 = ~Es ist Zeit, sich auszuruhen, und zu beten... ~ [A#MURN07]
+@16 = ~Diese Untätigkeit dient niemandem! ~ [A#MURN08]
+@17 = ~Für Ghaunadaur! ~ [A#MURN09]
+@18 = ~In den Abysss mit Euch! ~ [A#MURN10]
+@19 = ~Ihr sollt die dunkle Umarmung des Todes kennen! ~ [A#MURN11]
+@20 = ~sssslkkk!!! ~ [A#MURN12]
+@21 = ~~ [A#MURN13]
+@22 = ~~ [A#MURN14]
+@23 = ~Wunden heilen zu gegebener Zeit... ~ [A#MURN15]
+@24 = ~Das Moos, die Nacktschnecken... Sogar hier hat Ghaunadaur seine Diener. ~ [A#MURN16]
+@25 = ~Städte sind der vollkommene Unterschlupf für die Diener von Ghaunadaur... ~ [A#MURN17]
+@26 = ~Ah, wie herrlich ist ein Platz, an dem wir sind! ~ [A#MURN18]
+@27 = ~Mir wurde gesagt, dass das jetzt leicht ist, aber solche Dinge sind für jemanden wie mich bedeutungslos. ~ [A#MURN19]
+@28 = ~Ich bevorzuge die Nacht. Sie ist viel kühlerer... ~ [A#MURN20]
+@29 = ~gthrrr ... ~ [A#MURN21]
+@30 = ~Jaaa? ~ [A#MURN22]
+@31 = ~Ich fühle Euch rufen... ~ [A#MURN23]
+@32 = ~Waas? ~ [A#MURN24]
+@33 = ~Ich höre Euch! ~ [A#MURN25]
+@34 = ~ssssschlrr... ~ [A#MURN26]
+@35 = ~Sehr gut. ~ [A#MURN27]
+@36 = ~Wie Ihr wünscht. ~ [A#MURN28]
+@37 = ~Im Namen von Ghaunadaur! ~ [A#MURN29]
+@38 = ~Eine einfache Sache. ~ [A#MURN30]
+@39 = ~flllrrr... ~ [A#MURN31]
+@40 = ~kccccccch... ~ [A#MURN32]
+@41 = ~In meiner *eigenen* Zeit, denke ich... ~ [A#MURN33]
+@42 = ~Ich diene Ghaunadaur, nicht Euch! Lasst mich in Ruhe! ~ [A#MURN34]
+@43 = ~Ich bin es leid, dass Ihr mir ständig mit Eurer Hand auf meine Schulter klopft... Nicht, dass ich wirklich eine Schulter *habe*... Hmm ... ~ [A#MURN35]
+@44 = ~Gebt nach, Wurm ... ~ [A#MURN36]
+@45 = ~Arrrppp! ~ [A#MURN37]
+@46 = ~Das ist... nicht möglich! ~ [A#MURN38]
+@47 = ~Tragt Euren eigenen Abfall! ~ [A#MURN39]
+@48 = ~Für der Ruhm von Ghaunadaur, das ist jetzt meins. ~ [A#MURN40]
+@49 = ~Sie sollen nie wissen, was sie schlägt... ~ [A#MURN41]
+@50 = ~Frevel! ~ [A#MURN42]
+@51 = ~Bleibt weg. ~ [A#MURN43]
+@52 = ~Wenn Ihr nach seiner Vergangenheit fragt, dreht sich MUR'NETH zu Euch um, und lässt ein langes, gequältes Gluckern heraus. Obwohl seine wahre Form die des Schlamms ist, scheint er sich wohl zu fühlen, als Mann bezeichnet zu werden.
+
+Ihr hört aus seinen Worten eine tiefe Hingabe zu seiner Gottheit Ghaunadaur, Schöpfer seiner Rasse, heraus. Mur'Neth offenbart, dass das für seine Art typisch ist - sie leben wahrhaftig, um ihm zu dienen. Mur'Neth wurde erst kürzlich hervorgebracht, um das Verderben der Erze unten in den Nashkel Gruben zu untersuchen, das auf den Tod vielen heimischen Schlamms und Schimmels in dem Gebiet hinaus läuft. Das missfiel Ghaunadaur außerordentlich, obwohl er sich damit zufrieden zu geben scheint, Mur'Neth zu erlauben, Euch fürs Erste zu im begleiten... ~
+@53 = ~Bitte drückt nicht die Escape-Taste, um aus dem Fenster zu kommen, drückt stattdessen ENTER, um aufzuhören.
+Das soll Audiodekompression erlauben. ~
+@54 = ~Ihr habt Indira installiert, Hinzufügen von zusätzlichen Gesprächen... ~
+@55 = ~Ihr habt Finch installiert, Hinzufügen von zusätzlichen Gesprächen...~
+@56 = ~Zeit, um etwas FLEISCH in Streifen zu schneiden! ~ [GDOPP03]
+@57 = ~~ [GDOPP04]
+@58 = ~Erscheinungen können täuschen, Affe! ~ [GDOPP01]
+@59 = ~Gebt Euch selbst auf, Euer Tod wird weniger... schmerzhaft sein. ~ [GDOPP02]
+@60 = ~~ [DOPPL08]
+@61 = ~~ [DOPP08]
+@62 = ~~ [DOPP09]
+@63 = ~~ [DOPP05]
+@64 = ~~ [DOPPL09]
+@65 = ~Ghaunadan-Zauberer ~
+@66 = ~Ghaunadan-Druide ~
+@67 = ~~ [DOPPL05]
+@68 = ~~ [DOPPL04]
+@69 = ~Entfernt Auswahl seltener Klänge~
+@70 = ~Ihr müsst Mur'Neth installiert haben, um diese Alternative auszuwählen. ~

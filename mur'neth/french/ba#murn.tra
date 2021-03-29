@@ -1,18 +1,18 @@
 @0 = ~Je peux sentir que vous êtes un <PRO_RACE> très spécial, <CHARNAME>... Cela signifie sans aucun doute que Ghaunadaur vous honore, et que notre rencontre était prédestinée.~ ~Je peux sentir que vous êtes une <PRO_RACE> très spéciale, <CHARNAME>... Cela signifie sans aucun doute que Ghaunadaur vous honore, et que notre rencontre était prédestinée.~
-@1 = ~ Peut-être avez-vous raison Mur’Neth. Dîtes m’en plus sur ce Ghaunadaur.~
+@1 = ~Peut-être avez-vous raison Mur’Neth. Dîtes m’en plus sur ce Ghaunadaur.~
 @2 = ~Je ne trouve pas cela vraisemblable. Je ne suis pas un limon après tout !~
 @3 = ~Pourquoi pensez-vous que ce serait Ghaunadaur ?~
-@4 = ~ Je n’ai pas grand-chose à voir avec les Dieux; de ce que j’ai appris à Chateausuif, ils semblent tout à fait mesquins.~
+@4 = ~Je n’ai pas grand-chose à voir avec les Dieux; de ce que j’ai appris à Chateausuif, ils semblent tout à fait mesquins.~
 @5 = ~En fait, je ne me sens pas vraiment spécial.~ ~En fait, je ne me sens pas vraiment spéciale .~
 @6 = ~Ferme-la et reprends ta place, grumeau inutile.~
 @7 = ~Ghaunadaur soit loué ! Nous avons expédié d’innombrables ennemis dans l’au-delà, et nous dominons toujours. Ceci est clairement un signe de l’intervention de Celui qui Menace.~
-@8 = ~ Dois-tu voir la main de ton Dieu partout ? Pourquoi toujours ce mysticisme, qu’advient-il des coïncidences ?~
+@8 = ~Dois-tu voir la main de ton Dieu partout ? Pourquoi toujours ce mysticisme, qu’advient-il des coïncidences ?~
 @9 = ~J’aimerais mieux ne pas avoir à entendre ton horrible voix gutturale. Rends moi donc service en te taisant !~
-@10 = ~ Tu sais, je pense que tu as peut-être raison. J’ai clairement senti que les choses étaient plus faciles depuis que tu nous as rejoints.~
+@10 = ~Tu sais, je pense que tu as peut-être raison. J’ai clairement senti que les choses étaient plus faciles depuis que tu nous as rejoints.~
 @11 = ~Tout n’a pas été aussi bien que tu sembles le penser. Nous sommes fatigués, affamés, et nous avons reçu de terribles blessures au cours de notre périple.~
 @12 = ~Les dieux voient tout, même si parfois nous les oublions. Vos érudits de Chateausuif les considèrent comme mesquins par jalousie de ce pouvoir auquel ils ne pourront jamais prétendre...~
 @13 = ~Peu importe. Je ne pense pas que Ghaunadaur m’observe. Je ne suis pas un limon après tout !~
-@14 = ~ En vérité, je ne me sens pas vraiment spécial.~ ~En vérité, je ne me sens pas vraiment spéciale .~
+@14 = ~En vérité, je ne me sens pas vraiment spécial.~ ~En vérité, je ne me sens pas vraiment spéciale .~
 @15 = ~Saint Ghaunadaur, Celui Qui Menace, l’Oeil Ancien ! Il est partout, même si souvent ses disciples sont invisibles aux yeux des autres. Il a même crée mon peuple pour en faire ses disciples – n’est-ce pas une preuve suffisante de sa majesté ?~
 @16 = ~Ne souhaiterais-tu pas être un homme libre ? Pourquoi servir les dieux ?~
 @17 = ~Ghaunadaur a aussi d’autres disciples – certains des drows d’Ombre-Terre l’appellent Maître, et au fur et à mesure que le temps passe, de plus en plus d’êtres de chair découvrent ses enseignements.~
@@ -22,8 +22,8 @@
 @21 = ~Je vois... Je suppose que nous devrions continuer. On pourra en discuter plus longuement plus tard.~
 @22 = ~Tu as raison, je suppose que c’est incompréhensible pour moi. Mais c’en est assez sur ce sujet, pour le moment du moins.~
 @23 = ~Tes paroles sont censées Mur’Neth. Je devrais y réfléchir... mais viens, retournons à notre tâche.~
-@24 = ~ Bien que vous ne soyez qu’un simple <PRO_RACE> et que vous ne soyez pas une créature bénie telle que moi, je peux dire vous êtes marqué de grandeur... Et même si vous ne vénérez pas encore Ghaunadaur, je suis sûr que je peux vous éclairer sur ses enseignements.~
- ~ Bien que vous ne soyez qu’une simple <PRO_RACE> et que vous ne soyez pas une créature bénie telle que moi, je peux dire vous êtes marquée de grandeur... Et même si vous ne vénérez pas encore Ghaunadaur, je suis sûr que je peux vous éclairer sur ses enseignements.~
+@24 = ~Bien que vous ne soyez qu’un simple <PRO_RACE> et que vous ne soyez pas une créature bénie telle que moi, je peux dire vous êtes marqué de grandeur... Et même si vous ne vénérez pas encore Ghaunadaur, je suis sûr que je peux vous éclairer sur ses enseignements.~
+ ~Bien que vous ne soyez qu’une simple <PRO_RACE> et que vous ne soyez pas une créature bénie telle que moi, je peux dire vous êtes marquée de grandeur... Et même si vous ne vénérez pas encore Ghaunadaur, je suis sûr que je peux vous éclairer sur ses enseignements.~
 @25 = ~Je n’ai aucune foi en les coïncidences. Les divinités peuvent voir et savoir plus que nous, tout ce qui arrive est clairement leur fait. Cela n’est pas une évidence à vos yeux ?~
 @26 = ~Réponds donc à cela alors. Comment une déesse telle que Tymora, qui préside sur la chance, peut *exister* si la coïncidence n’existe pas ?~
 @27 = ~Je suis las de cette dévotion aveugle et incessante. Arrête de babiller et avançons.~

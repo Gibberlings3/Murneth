@@ -1,7 +1,7 @@
 BACKUP ~mur'neth/backup~
 SUPPORT ~http://gibberlings3.net/forums/index.php?showforum=50~
 
-VERSION ~v12~
+VERSION ~v13~
 
 README ~mur'neth/readme-murneth.html~
 
@@ -60,6 +60,10 @@ LANGUAGE ~Italian (Ilot)~
 	 ~Italian~
 	 ~mur'neth/english/setup.tra~
 	 ~mur'neth/italian/setup.tra~
+LANGUAGE ~Russian (yota13 & p_zombie)~
+	 ~Russian~
+	 ~mur'neth/english/setup.tra~
+	 ~mur'neth/russian/setup.tra~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -474,6 +478,43 @@ ACTION_IF MOD_IS_INSTALLED ~cdtweaks/setup-cdtweaks.tp2~ ~1210~ THEN BEGIN // us
     LPF ADD_CRE_EFFECT INT_VAR opcode = 176 target = 1 parameter1 = 0xfffffffd timing = 9 END
     BUT_ONLY
 
+END
+
+ACTION_IF (GAME_IS ~bgee~ AND GAME_INCLUDES ~sod~) OR (GAME_IS ~eet~) BEGIN
+	COPY_EXISTING ~BD0103.bcs~ ~override~
+		DECOMPILE_AND_PATCH BEGIN
+			REPLACE_TEXTUALLY ~ActionOverride("dorn",DestroySelf())~ ~ActionOverride("dorn",DestroySelf())
+		Continue()
+END
+
+IF
+	OR(2)
+		InMyArea("A#MURN")  
+		InPartyAllowDead("A#MURN")  
+	GlobalLT("BD_PLOT","GLOBAL",51)
+THEN
+	RESPONSE #100
+		ApplySpellRES("bdresurr","A#MURN")  // No such index
+		SmallWait(1)
+		ActionOverride("A#MURN",LeaveParty())
+		SmallWait(1)
+		ActionOverride("A#MURN",DestroySelf())~
+		END
+END
+
+ACTION_IF GAME_IS ~eet~ BEGIN
+	ACTION_IF FILE_EXISTS ~mur'neth/%LANGUAGE%/transition.tra~ BEGIN
+		INCLUDE ~EET/other/EET_functions.tph~
+		LAF ~EET_NPC_TRANSITION~
+			INT_VAR
+				type = 1
+			STR_VAR
+				dv = "A#MURN"
+				override_BG1 = "A#MURN"
+				traFile = EVAL "mur'neth/%LANGUAGE%/transition.tra"
+				string = "@1"
+		END
+	END
 END
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\

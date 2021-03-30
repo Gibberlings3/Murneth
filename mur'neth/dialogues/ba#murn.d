@@ -4,7 +4,8 @@ IF ~CombatCounter(0)
 !See([ENEMY])
 Global("A#MurnPC1","LOCALS",0)
 See(Player1)
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 !Dead("A#MURN")~ THEN BEGIN Murn_PC_1
 SAY @0
 IF ~~ THEN REPLY @1 DO ~SetGlobal("A#MurnPC1","LOCALS",1)~ GOTO Murn_PC_1_Ghaun
@@ -19,7 +20,8 @@ IF ~CombatCounter(0)
 !See([ENEMY])
 Global("A#MurnPC1","LOCALS",1)
 See(Player1)
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 !Dead("A#MURN")~ THEN BEGIN Murn_PC_2
 SAY @7
 IF ~~ THEN REPLY @8 DO ~SetGlobal("A#MurnPC1","LOCALS",2)~ GOTO Murn_PC_2_Mystic
@@ -112,11 +114,11 @@ END
 
 CHAIN IF ~CombatCounter(0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !See([ENEMY])
 InParty("AJANTIS")
 See("AJANTIS")
-!StateCheck("AJANTIS",STATE_SLEEPING)
+!StateCheck("AJANTIS",CD_STATE_NOTVALID)
 Global("A#MURN_AJANTIS","LOCALS",0)
 !Dead("A#MURN")
 !Dead("AJANTIS")~ THEN BA#MURN Murn_Ajantis
@@ -127,22 +129,23 @@ DO ~SetGlobal("A#MURN_AJANTIS","LOCALS",1)~
 == ~%AJANTIS_BANTER%~ @54
 == ~%YESLICK_BANTER%~ IF ~InParty("YESLICK")
 See("YESLICK")
-!StateCheck("YESLICK",STATE_SLEEPING)
+!StateCheck("YESLICK",CD_STATE_NOTVALID)
 !Dead("Yeslick")~ THEN @55
 == ~%DYNAHEIR_BANTER%~ IF ~InParty("DYNAHEIR")
 See("DYNAHEIR")
-!StateCheck("DYNAHEIR",STATE_SLEEPING)
+!StateCheck("DYNAHEIR",CD_STATE_NOTVALID)
 !Dead("DYNAHEIR")~ THEN @56
 == ~BA#MURN~ @57
 EXIT
 
 CHAIN IF ~CombatCounter(0)
 InParty("A#MURN")
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !See([ENEMY])
 InParty("ALORA")
 See("ALORA")
-!StateCheck("ALORA",STATE_SLEEPING)
+!StateCheck("ALORA",CD_STATE_NOTVALID)
 Global("A#MURN_Alora","LOCALS",0)
 !Dead("ALORA")~ THEN ~BA#MURN~ Murn_Alora
 @58
@@ -153,7 +156,7 @@ DO ~SetGlobal("A#MURN_Alora","LOCALS",1)~
 == ~BA#MURN~ @62
 == ~%XZAR_BANTER%~ IF ~InParty("XZAR")
 See("XZAR")
-!StateCheck("XZAR",STATE_SLEEPING)
+!StateCheck("XZAR",CD_STATE_NOTVALID)
 !Dead("XZAR")~ THEN @63
 == ~%ALORA_BANTER%~ @64
 EXIT
@@ -163,8 +166,8 @@ CHAIN IF ~CombatCounter(0)
 InParty("BRANWEN")
 See("BRANWEN")
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
-!StateCheck("BRANWEN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
+!StateCheck("BRANWEN",CD_STATE_NOTVALID)
 Global("A#MURN_BRANWEN","LOCALS",0)
 !Dead("A#MURN")
 !Dead("BRANWEN")~ THEN ~BA#MURN~ A#MURN_Branwen_1
@@ -175,11 +178,11 @@ DO ~SetGlobal("A#MURN_BRANWEN","LOCALS",1)~
 == ~%BRANWEN_BANTER%~ @68
 == ~%SAFANA_BANTER%~ IF ~InParty("SAFANA")
 See("SAFANA")
-!StateCheck("SAFANA",STATE_SLEEPING)
+!StateCheck("SAFANA",CD_STATE_NOTVALID)
 !Dead("SAFANA")~ THEN @69
 == ~%BRANWEN_BANTER%~ IF ~InParty("SAFANA")
 See("SAFANA")
-!StateCheck("SAFANA",STATE_SLEEPING)
+!StateCheck("SAFANA",CD_STATE_NOTVALID)
 !Dead("SAFANA")~ THEN @70
 == ~A#MURN~ @71
 == ~%BRANWEN_BANTER%~ @72
@@ -193,11 +196,11 @@ EXIT
 
 CHAIN IF ~CombatCounter(0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !See([ENEMY])
 InParty("CORAN")
 See("CORAN")
-!StateCheck("CORAN",STATE_SLEEPING)
+!StateCheck("CORAN",CD_STATE_NOTVALID)
 Global("A#MURN_CORAN","LOCALS",0)
 !Dead("A#MURN")
 !Dead("CORAN")~ THEN ~%CORAN_BANTER%~ Murn_CORAN
@@ -207,7 +210,7 @@ DO ~SetGlobal("A#MURN_CORAN","LOCALS",1)~
 == ~%CORAN_BANTER%~ @81
 == ~%MONTARON_BANTER%~ IF ~InParty("MONTARON")
 See("MONTARON")
-!StateCheck("MONTARON",STATE_SLEEPING)
+!StateCheck("MONTARON",CD_STATE_NOTVALID)
 !Dead("MONTARON")~ THEN @82
 == ~BA#MURN~ @83
 == ~%CORAN_BANTER%~ @84
@@ -220,9 +223,9 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("DYNAHEIR")
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 See("DYNAHEIR")
-!StateCheck("DYNAHEIR",STATE_SLEEPING)
+!StateCheck("DYNAHEIR",CD_STATE_NOTVALID)
 Global("A#MURN_DYNAHEIR","LOCALS",0)
 !Dead("A#MURN")
 !Dead("DYNAHEIR")~ THEN ~BA#Murn~ A#MURN_DYNAHEIR_1
@@ -232,7 +235,7 @@ DO ~SetGlobal("A#MURN_DYNAHEIR","LOCALS",1)~
 == ~BA#MURN~ @90
 == ~%MINSC_BANTER%~ IF ~InParty("MINSC")
 See("MINSC")
-!StateCheck("MINSC",STATE_SLEEPING)
+!StateCheck("MINSC",CD_STATE_NOTVALID)
 !Dead("MINSC")~ THEN @91
 == ~%DYNAHEIR_BANTER%~ @92
 == ~BA#MURN~ @93
@@ -240,12 +243,12 @@ See("MINSC")
 EXIT
 
 CHAIN IF ~InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
 InParty("EDWIN")
 See("EDWIN")
-!StateCheck("EDWIN",STATE_SLEEPING)
+!StateCheck("EDWIN",CD_STATE_NOTVALID)
 Global("A#MURN_EDWIN","LOCALS",0)
 !Dead("A#MURN")
 !Dead("EDWIN")~ THEN ~%EDWIN_BANTER%~ Murn_EDWIN_1
@@ -253,11 +256,11 @@ Global("A#MURN_EDWIN","LOCALS",0)
 DO ~SetGlobal("A#MURN_EDWIN","LOCALS",1)~
 == ~%XAN_BANTER%~ IF ~InParty("XAN")
 See("XAN")
-!StateCheck("XAN",STATE_SLEEPING)
+!StateCheck("XAN",CD_STATE_NOTVALID)
 !Dead("XAN")~ THEN @96
 == ~%XAN_BANTER%~ IF ~InParty("XAN")
 See("XAN")
-!StateCheck("XAN",STATE_SLEEPING)
+!StateCheck("XAN",CD_STATE_NOTVALID)
 !Dead("XAN")~ THEN @97
 == ~BA#MURN~ @98
 == ~%EDWIN_BANTER%~ @99
@@ -272,10 +275,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("ELDOTH")
 See("ELDOTH")
-!StateCheck("ELDOTH",STATE_SLEEPING)
+!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 Global("A#MURN_ELDOTH","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("ELDOTH")~ THEN ~%ELDOTH_BANTER%~ Murn_ELDOTH
 @105
@@ -285,16 +288,16 @@ DO ~SetGlobal("A#MURN_ELDOTH","LOCALS",1)~
 == ~BA#MURN~ @108
 == ~%MINSC_BANTER%~ IF ~InParty("MINSC")
 See("MINSC")
-!StateCheck("MINSC",STATE_SLEEPING)
+!StateCheck("MINSC",CD_STATE_NOTVALID)
 !Dead("MINSC")~ THEN @109
 == ~%ELDOTH_BANTER%~ IF ~InParty("MINSC")
 See("MINSC")
-!StateCheck("MINSC",STATE_SLEEPING)
+!StateCheck("MINSC",CD_STATE_NOTVALID)
 !Dead("MINSC")~ THEN @110
 == ~%ELDOTH_BANTER%~ IF ~OR(4)
 !InParty("MINSC")
 !See("MINSC")
-StateCheck("MINSC",STATE_SLEEPING)
+StateCheck("MINSC",CD_STATE_NOTVALID)
 Dead("MINSC")~ THEN @111
 EXIT
 
@@ -302,10 +305,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("FALDORN")
 See("FALDORN")
-!StateCheck("FALDORN",STATE_SLEEPING)
+!StateCheck("FALDORN",CD_STATE_NOTVALID)
 Global("A#MURN_FALDORN","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("FALDORN")~ THEN ~%FALDORN_BANTER%~ MURN_FALDORN_1
 @112
@@ -317,7 +320,7 @@ DO ~SetGlobal("A#MURN_FALDORN","LOCALS",1)~
 == ~%FALDORN_BANTER%~ @117
 == ~%JAHEIRA_BANTER%~ IF ~InParty("JAHEIRA")
 See("JAHEIRA")
-!StateCheck("JAHEIRA",STATE_SLEEPING)
+!StateCheck("JAHEIRA",CD_STATE_NOTVALID)
 !Dead("JAHEIRA")~ THEN @118
 == ~%FALDORN_BANTER%~ @119
 == ~BA#MURN~ @120
@@ -329,10 +332,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("GARRICK")
 See("GARRICK")
-!StateCheck("GARRICK",STATE_SLEEPING)
+!StateCheck("GARRICK",CD_STATE_NOTVALID)
 Global("A#MURN_GARRICK","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("GARRICK")~ THEN ~%GARRICK_BANTER%~ Murn_GARRICK
 @123
@@ -342,7 +345,7 @@ DO ~SetGlobal("A#MURN_GARRICK","LOCALS",1)~
 == BA#MURN @126
 == ~%EDWIN_BANTER%~ IF ~InParty("EDWIN")
 See("EDWIN")
-!StateCheck("EDWIN",STATE_SLEEPING)
+!StateCheck("EDWIN",CD_STATE_NOTVALID)
 !Dead("EDWIN")~ THEN @127
 == ~%GARRICK_BANTER%~ @128
 == BA#MURN @129
@@ -355,10 +358,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("%IMOEN_DV%")
 See("%IMOEN_DV%")
-!StateCheck("%IMOEN_DV%",STATE_SLEEPING)
+!StateCheck("%IMOEN_DV%",CD_STATE_NOTVALID)
 Global("A#MURN_IMOEN","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("%IMOEN_DV%")~ THEN ~BA#MURN~ Murn_IMOEN
 @133
@@ -368,7 +371,7 @@ DO ~SetGlobal("A#MURN_IMOEN","LOCALS",1)~
 == ~%IMOEN_BANTER%~ @136
 == ~%QUAYLE_BANTER%~ IF ~InParty("QUAYLE")
 See("QUAYLE")
-!StateCheck("QUAYLE",STATE_SLEEPING)
+!StateCheck("QUAYLE",CD_STATE_NOTVALID)
 !Dead("QUAYLE")~ THEN @137
 == ~%IMOEN_BANTER%~ @138
 == BA#MURN @139
@@ -380,13 +383,13 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("JAHEIRA")
 See("JAHEIRA")
-!StateCheck("JAHEIRA",STATE_SLEEPING)
+!StateCheck("JAHEIRA",CD_STATE_NOTVALID)
 InParty("KHALID")
 See("KHALID")
-!StateCheck("KHALID",STATE_SLEEPING)
+!StateCheck("KHALID",CD_STATE_NOTVALID)
 Global("A#MURN_JAHEIRA","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("KHALID")
 !Dead("JAHEIRA")~ THEN ~BA#MURN~ MURN_JAHEIRA_1
@@ -404,15 +407,15 @@ DO ~SetGlobal("A#MURN_JAHEIRA","LOCALS",1)~
 == ~%JAHEIRA_BANTER%~ @152
 == ~%GARRICK_BANTER%~ IF ~InParty("GARRICK")
 See("GARRICK")
-!StateCheck("GARRICK",STATE_SLEEPING)
+!StateCheck("GARRICK",CD_STATE_NOTVALID)
 !Dead("GARRICK")~ THEN @153
 == ~%KHALID_BANTER%~ IF ~InParty("GARRICK")
 See("GARRICK")
-!StateCheck("GARRICK",STATE_SLEEPING)
+!StateCheck("GARRICK",CD_STATE_NOTVALID)
 !Dead("GARRICK")~ THEN @154
 == ~%JAHEIRA_BANTER%~ IF ~InParty("GARRICK")
 See("GARRICK")
-!StateCheck("GARRICK",STATE_SLEEPING)
+!StateCheck("GARRICK",CD_STATE_NOTVALID)
 !Dead("GARRICK")~ THEN @155
 == ~%KHALID_BANTER%~ @156
 == ~%JAHEIRA_BANTER%~ @157
@@ -423,10 +426,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("KAGAIN")
 See("KAGAIN")
-!StateCheck("KAGAIN",STATE_SLEEPING)
+!StateCheck("KAGAIN",CD_STATE_NOTVALID)
 Global("A#MURN_KAGAIN","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("KAGAIN")~ THEN ~%KAGAIN_BANTER%~ Murn_KAGAIN
 @159
@@ -435,7 +438,7 @@ DO ~SetGlobal("A#MURN_KAGAIN","LOCALS",1)~
 == ~%KAGAIN_BANTER%~ @161
 == ~%MONTARON_BANTER%~ IF ~InParty("MONTARON")
 See("MONTARON")
-!StateCheck("MONTARON",STATE_SLEEPING)
+!StateCheck("MONTARON",CD_STATE_NOTVALID)
 !Dead("MONTARON")~ THEN @162
 == ~BA#MURN~ @163
 == ~%KAGAIN_BANTER%~ @164
@@ -448,10 +451,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("KHALID")
 See("KHALID")
-!StateCheck("KHALID",STATE_SLEEPING)
+!StateCheck("KHALID",CD_STATE_NOTVALID)
 Global("A#MURN_KHALID","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("KHALID")~ THEN ~BA#MURN~ Murn_KHALID_1
 @168
@@ -461,7 +464,7 @@ DO ~SetGlobal("A#MURN_KHALID","LOCALS",1)~
 == ~%KHALID_BANTER%~ @171
 == ~%JAHEIRA_BANTER%~ IF ~InParty("JAHEIRA")
 See("JAHEIRA")
-!StateCheck("JAHEIRA",STATE_SLEEPING)
+!StateCheck("JAHEIRA",CD_STATE_NOTVALID)
 !Dead("JAHEIRA")~ THEN @172
 == ~BA#MURN~ @173
 == ~%KHALID_BANTER%~ @174
@@ -471,10 +474,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("KIVAN")
 See("KIVAN")
-!StateCheck("KIVAN",STATE_SLEEPING)
+!StateCheck("KIVAN",CD_STATE_NOTVALID)
 Global("A#MURN_KIVAN","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("KIVAN")~ THEN ~BA#MURN~ Murn_KIVAN
 @175
@@ -492,17 +495,17 @@ InParty("MINSC")
 InParty("Dynaheir")
 !Dead("Dynaheir")
 See("MINSC")
-!StateCheck("MINSC",STATE_SLEEPING)
+!StateCheck("MINSC",CD_STATE_NOTVALID)
 Global("A#MURN_MINSC","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("MINSC")~ THEN ~BA#MURN~ Murn_MINSC
 @181
 DO ~SetGlobal("A#MURN_MINSC","LOCALS",1)~
 == ~%MINSC_BANTER%~ @182
 == ~%DYNAHEIR_BANTER%~ IF ~See("Dynaheir")
-!StateCheck("Dynaheir",STATE_SLEEPING)~ THEN @183
+!StateCheck("Dynaheir",CD_STATE_NOTVALID)~ THEN @183
 == ~BA#MURN~ @184
 == ~%MINSC_BANTER%~ @185
 == ~BA#MURN~ @186
@@ -515,10 +518,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("MONTARON")
 See("MONTARON")
-!StateCheck("MONTARON",STATE_SLEEPING)
+!StateCheck("MONTARON",CD_STATE_NOTVALID)
 Global("A#MURN_MONTARON","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("MONTARON")~ THEN ~%MONTARON_BANTER%~ Murn_MONTARON
 @190
@@ -530,7 +533,7 @@ DO ~SetGlobal("A#MURN_MONTARON","LOCALS",1)~
 == ~BA#MURN~ @195
 == ~%KAGAIN_BANTER%~ IF ~InParty("Kagain")
 See("Kagain")
-!StateCheck("Kagain",STATE_SLEEPING)
+!StateCheck("Kagain",CD_STATE_NOTVALID)
 !Dead("Kagain")~ THEN @196
 == ~%MONTARON_BANTER%~ @197
 EXIT
@@ -539,10 +542,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("QUAYLE")
 See("QUAYLE")
-!StateCheck("QUAYLE",STATE_SLEEPING)
+!StateCheck("QUAYLE",CD_STATE_NOTVALID)
 Global("A#MURN_QUAYLE","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("QUAYLE")~ THEN ~BA#MURN~ Murn_QUAYLE
 @198
@@ -554,7 +557,7 @@ DO ~SetGlobal("A#MURN_QUAYLE","LOCALS",1)~
 == ~%QUAYLE_BANTER%~ @203
 == ~%XZAR_BANTER%~ IF ~InParty("XZAR")
 See("XZAR")
-!StateCheck("XZAR",STATE_SLEEPING)
+!StateCheck("XZAR",CD_STATE_NOTVALID)
 !Dead("XZAR")~ THEN @204
 == ~%QUAYLE_BANTER%~ @205
 == ~BA#MURN~ @206
@@ -565,10 +568,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("SAFANA")
 See("SAFANA")
-!StateCheck("SAFANA",STATE_SLEEPING)
+!StateCheck("SAFANA",CD_STATE_NOTVALID)
 Global("A#MURN_SAFANA","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("SAFANA")~ THEN ~A#MURN~ Murn_SAFANA
 @208
@@ -577,12 +580,12 @@ DO ~SetGlobal("Garrick_SAFANA","LOCALS",1)~
 == ~BA#MURN~ @210
 == ~%CORAN_BANTER%~ IF ~InParty("coran")
 See("coran")
-!StateCheck("coran",STATE_SLEEPING)
+!StateCheck("coran",CD_STATE_NOTVALID)
 !Dead("coran")~ THEN @211
 == ~%SAFANA_BANTER%~ @212
 == ~%SKIE_BANTER%~ IF ~InParty("skie")
 See("skie")
-!StateCheck("skie",STATE_SLEEPING)
+!StateCheck("skie",CD_STATE_NOTVALID)
 !Dead("skie")~ THEN @213
 == ~%SAFANA_BANTER%~ @214
 == ~BA#MURN~ @215
@@ -596,10 +599,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("SHARTEEL")
 See("SHARTEEL")
-!StateCheck("SHARTEEL",STATE_SLEEPING)
+!StateCheck("SHARTEEL",CD_STATE_NOTVALID)
 Global("A#MURN_SHARTEEL","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("SHARTEEL")~ THEN ~%SHARTEEL_BANTER%~ MURN_SHARTEEL
 @220
@@ -609,7 +612,7 @@ DO ~SetGlobal("A#MURN_SHARTEEL","LOCALS",1)~
 == ~BA#MURN~ @223
 == ~%QUAYLE_BANTER%~ IF ~InParty("QUAYLE")
 See("QUAYLE")
-!StateCheck("QUAYLE",STATE_SLEEPING)
+!StateCheck("QUAYLE",CD_STATE_NOTVALID)
 !Dead("QUAYLE")~ THEN @224
 == ~%SHARTEEL_BANTER%~ @225
 EXIT
@@ -618,21 +621,21 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("SKIE")
 See("SKIE")
-!StateCheck("SKIE",STATE_SLEEPING)
+!StateCheck("SKIE",CD_STATE_NOTVALID)
 Global("A#MURN_SKIE","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("SKIE")~ THEN ~%SKIE_BANTER%~ Murn_SKIE
 @226
 DO ~SetGlobal("A#MURN_SKIE","LOCALS",1)~
 == ~%ELDOTH_BANTER%~ IF ~InParty("ELDOTH")
 See("ELDOTH")
-!StateCheck("ELDOTH",STATE_SLEEPING)
+!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 !Dead("ELDOTH")~ THEN @227
 == ~%SKIE_BANTER%~ IF ~InParty("ELDOTH")
 See("ELDOTH")
-!StateCheck("ELDOTH",STATE_SLEEPING)
+!StateCheck("ELDOTH",CD_STATE_NOTVALID)
 !Dead("ELDOTH")~ THEN @228
 == ~BA#MURN~ @229
 == ~%SKIE_BANTER%~ @230
@@ -649,10 +652,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("TIAX")
 See("TIAX")
-!StateCheck("TIAX",STATE_SLEEPING)
+!StateCheck("TIAX",CD_STATE_NOTVALID)
 Global("A#MURN_TIAX","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("TIAX")~ THEN ~%TIAX_BANTER%~ Murn_TIAX
 @238
@@ -662,7 +665,7 @@ DO ~SetGlobal("A#MURN_TIAX","LOCALS",1)~
 == ~BA#MURN~ @241
 == ~%QUAYLE_BANTER%~ IF ~InParty("Quayle")
 See("Quayle")
-!StateCheck("Quayle",STATE_SLEEPING)
+!StateCheck("Quayle",CD_STATE_NOTVALID)
 !Dead("Quayle")~ THEN @242
 == ~%TIAX_BANTER%~ @243
 == ~BA#MURN~ @244
@@ -675,17 +678,17 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("VICONIA")
 See("VICONIA")
-!StateCheck("VICONIA",STATE_SLEEPING)
+!StateCheck("VICONIA",CD_STATE_NOTVALID)
 Global("A#MURN_VICONIA","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("VICONIA")~ THEN ~BA#MURN~ MURN_VICONIA
 @248
 DO ~SetGlobal("A#MURN_VICONIA","LOCALS",1)~
 == ~%KIVAN_BANTER%~ IF ~InParty("kivan")
 See("kivan")
-!StateCheck("kivan",STATE_SLEEPING)
+!StateCheck("kivan",CD_STATE_NOTVALID)
 !Dead("kivan")~ THEN @249
 == ~%VICONIA_BANTER%~ @250
 == ~BA#MURN~ @251
@@ -698,10 +701,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("XAN")
 See("XAN")
-!StateCheck("XAN",STATE_SLEEPING)
+!StateCheck("XAN",CD_STATE_NOTVALID)
 Global("A#MURN_XAN","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("XAN")~ THEN ~%XAN_BANTER%~ A#MURN_XAN
 @255
@@ -715,7 +718,7 @@ DO ~SetGlobal("A#MURN_XAN","LOCALS",1)~
 == ~BA#MURN~ @262
 == ~%QUAYLE_BANTER%~ IF ~InParty("quayle")
 See("quayle")
-!StateCheck("quayle",STATE_SLEEPING)
+!StateCheck("quayle",CD_STATE_NOTVALID)
 !Dead("quayle")~ THEN @263
 == ~%XAN_BANTER%~ @264
 == ~BA#MURN~ @265
@@ -726,10 +729,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("XZAR")
 See("XZAR")
-!StateCheck("XZAR",STATE_SLEEPING)
+!StateCheck("XZAR",CD_STATE_NOTVALID)
 Global("A#MURN_XZAR","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")!
 Dead("XZAR")~ THEN ~%XZAR_BANTER%~ Murn_XZAR
 @267
@@ -738,7 +741,7 @@ DO ~SetGlobal("A#MURN_XZAR","LOCALS",1)~
 == ~%XZAR_BANTER%~ @269
 == ~%MONTARON_BANTER%~ IF ~InParty("Montaron")
 See("Montaron")
-!StateCheck("Montaron",STATE_SLEEPING)
+!StateCheck("Montaron",CD_STATE_NOTVALID)
 !Dead("Montaron")~ THEN @270
 == ~BA#MURN~ @271
 == ~%XZAR_BANTER%~ @272
@@ -752,10 +755,10 @@ CHAIN IF ~CombatCounter(0)
 !See([ENEMY])
 InParty("YESLICK")
 See("YESLICK")
-!StateCheck("YESLICK",STATE_SLEEPING)
+!StateCheck("YESLICK",CD_STATE_NOTVALID)
 Global("A#MURN_YESLICK","LOCALS",0)
 InParty("A#MURN")
-!StateCheck("A#MURN",STATE_SLEEPING)
+!StateCheck("A#MURN",CD_STATE_NOTVALID)
 !Dead("A#MURN")
 !Dead("YESLICK")~ THEN ~%YESLICK_BANTER%~ Murn_YESLICK
 @277
@@ -765,7 +768,7 @@ DO ~SetGlobal("A#MURN_YESLICK","LOCALS",1)~
 == ~BA#MURN~ @280
 == ~%QUAYLE_BANTER%~ IF ~InParty("Quayle")
 See("Quayle")
-!StateCheck("Quayle",STATE_SLEEPING)
+!StateCheck("Quayle",CD_STATE_NOTVALID)
 !Dead("Quayle")~ THEN @281
 == ~%YESLICK_BANTER%~ @282
 == ~BA#MURN~ @283

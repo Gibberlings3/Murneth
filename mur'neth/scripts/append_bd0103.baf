@@ -1,0 +1,15 @@
+IF
+  OR(2)
+    InParty("A#MURN")
+    InPartyAllowDead("A#MURN")
+  GlobalLT("BD_PLOT","GLOBAL",51)
+THEN
+  RESPONSE #100
+    ActionOverride("A#MURN",LeaveParty())
+		ActionOverride("A#MURN",ChangeAIScript("",DEFAULT))
+		ActionOverride("A#MURN",ClearAllActions())
+	ActionOverride("PlayerChest00",TakeCreatureItems("A#MURN",BACKPACK))
+    SmallWait(1)
+    ActionOverride("A#MURN",DestroySelf())
+    Continue()
+END

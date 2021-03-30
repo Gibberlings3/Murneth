@@ -30,6 +30,10 @@ ALWAYS
       LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~mur'neth~ reload_array = cdreload END
 
 	END
+
+// Adds CD_STATE_NOTVALID state
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
 	  
   END
 
@@ -480,28 +484,16 @@ ACTION_IF MOD_IS_INSTALLED ~cdtweaks/setup-cdtweaks.tp2~ ~1210~ THEN BEGIN // us
 
 END
 
-ACTION_IF (GAME_IS ~bgee~ AND GAME_INCLUDES ~sod~) OR (GAME_IS ~eet~) BEGIN
-	COPY_EXISTING ~BD0103.bcs~ ~override~
-		DECOMPILE_AND_PATCH BEGIN
-			REPLACE_TEXTUALLY ~ActionOverride("dorn",DestroySelf())~ ~ActionOverride("dorn",DestroySelf())
-		Continue()
+
+// SoD/BGT compatibility: Mur'Neth leaves the party at transition.
+ACTION_IF (GAME_IS ~bgee~ AND GAME_INCLUDES ~sod~) OR (GAME_IS ~eet~) THEN BEGIN
+	EXTEND_TOP ~bd0103.bcs~ ~mur'neth/Scripts/append_bd0103.baf~
+END 
+ACTION_IF GAME_IS ~bgt~ THEN BEGIN
+	EXTEND_TOP ~aram00.bcs~ ~mur'neth/Scripts/append_aram00.baf~
 END
 
-IF
-	OR(2)
-		InMyArea("A#MURN")  
-		InPartyAllowDead("A#MURN")  
-	GlobalLT("BD_PLOT","GLOBAL",51)
-THEN
-	RESPONSE #100
-		ApplySpellRES("bdresurr","A#MURN")  // No such index
-		SmallWait(1)
-		ActionOverride("A#MURN",LeaveParty())
-		SmallWait(1)
-		ActionOverride("A#MURN",DestroySelf())~
-		END
-END
-
+//EET: add NPC to Fatespirit etc
 ACTION_IF GAME_IS ~eet~ BEGIN
 	ACTION_IF FILE_EXISTS ~mur'neth/%LANGUAGE%/transition.tra~ BEGIN
 		INCLUDE ~EET/other/EET_functions.tph~

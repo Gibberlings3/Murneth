@@ -1,0 +1,14 @@
+IF
+  OR(2)
+    InParty("A#MURN")
+    InPartyAllowDead("A#MURN")
+	Global("A#_MurNethLeavesBGT","GLOBAL",0)
+THEN
+	RESPONSE #100
+		ActionOverride("A#MURN",LeaveParty())
+		ActionOverride("A#MURN",ChangeAIScript("",DEFAULT))
+		ActionOverride("A#MURN",ClearAllActions())
+		ActionOverride("A#MURN",DestroySelf())
+		SetGlobal("A#_MurNethLeavesBGT","GLOBAL",1)
+		Continue()
+END

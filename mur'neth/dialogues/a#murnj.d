@@ -155,7 +155,7 @@ CHAIN IF ~~ THEN ~A#MURNJ~ Prey2
 @119
 == ~%XZAR_JOINED%~ IF ~InParty("Xzar")
 See("Xzar")
-!StateCheck("Xzar",STATE_SLEEPING)
+!StateCheck("Xzar",CD_STATE_NOTVALID)
 !Dead("Xzar")~ THEN @120
 == A#MURNJ @121
 EXIT

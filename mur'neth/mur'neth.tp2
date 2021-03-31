@@ -1,7 +1,7 @@
 BACKUP ~mur'neth/backup~
 SUPPORT ~http://gibberlings3.net/forums/index.php?showforum=50~
 
-VERSION ~v12~
+VERSION ~v13~
 
 README ~mur'neth/readme-murneth.html~
 
@@ -30,6 +30,10 @@ ALWAYS
       LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~mur'neth~ reload_array = cdreload END
 
 	END
+
+// Adds CD_STATE_NOTVALID state
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
 	  
   END
 
@@ -60,6 +64,10 @@ LANGUAGE ~Italian (Ilot)~
 	 ~Italian~
 	 ~mur'neth/english/setup.tra~
 	 ~mur'neth/italian/setup.tra~
+LANGUAGE ~Russian (yota13 & p_zombie)~
+	 ~Russian~
+	 ~mur'neth/english/setup.tra~
+	 ~mur'neth/russian/setup.tra~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -474,6 +482,31 @@ ACTION_IF MOD_IS_INSTALLED ~cdtweaks/setup-cdtweaks.tp2~ ~1210~ THEN BEGIN // us
     LPF ADD_CRE_EFFECT INT_VAR opcode = 176 target = 1 parameter1 = 0xfffffffd timing = 9 END
     BUT_ONLY
 
+END
+
+
+// SoD/BGT compatibility: Mur'Neth leaves the party at transition.
+ACTION_IF (GAME_IS ~bgee~ AND GAME_INCLUDES ~sod~) OR (GAME_IS ~eet~) THEN BEGIN
+	EXTEND_TOP ~bd0103.bcs~ ~mur'neth/Scripts/append_bd0103.baf~
+END 
+ACTION_IF GAME_IS ~bgt~ THEN BEGIN
+	EXTEND_TOP ~aram00.bcs~ ~mur'neth/Scripts/append_aram00.baf~
+END
+
+//EET: add NPC to Fatespirit etc
+ACTION_IF GAME_IS ~eet~ BEGIN
+	ACTION_IF FILE_EXISTS ~mur'neth/%LANGUAGE%/transition.tra~ BEGIN
+		INCLUDE ~EET/other/EET_functions.tph~
+		LAF ~EET_NPC_TRANSITION~
+			INT_VAR
+				type = 1
+			STR_VAR
+				dv = "A#MURN"
+				override_BG1 = "A#MURN"
+				traFile = EVAL "mur'neth/%LANGUAGE%/transition.tra"
+				string = "@1"
+		END
+	END
 END
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\

@@ -1,22 +1,22 @@
 @0 = ~Module Mur'Neth NPC pour Baldur's Gate Tutu (version 2)~
-@1 = ~Changement de forme: gelée~
-@2 = ~Changement de forme: humain~
+@1 = ~Changement de forme : gelée~
+@2 = ~Changement de forme : humain~
 @3 = ~Constriction~
 @4 = ~ghaunadain~
 @5 = ~Ghaunadain~
-@6 = ~GHAUNADAIN: Ces monstres intelligents mais cependant vils sont les serviteurs loyaux de Ghaunadaur, la divinité maléfique vénérée par les gelées, les vases, les limons ainsi que quelques Drows. Les Ghaunadains se rapprochent des vases mais ils sont assez intelligents et peuvent user de leur talent de métamorphe pour prendre l'apparence séduisante d'un humain. Au naturel, un Ghaunadain ressemble à une créature flasque comme une vase grise.
+@6 = ~GHAUNADAIN: Ces monstres intelligents, mais cependant vils, sont les serviteurs loyaux de Ghaunadaur, la divinité maléfique vénérée par les gelées, les vases, les limons ainsi que quelques drows. Les Ghaunadains se rapprochent des vases, mais ils sont assez intelligents et peuvent user de leur talent de métamorphe pour prendre l'apparence séduisante d'un humain. Au naturel, un Ghaunadain ressemble à une créature flasque comme une vase grise.
 
-Les Ghaunadains manquent des qualités inhérentes aux voleurs, mais ils n'en sont pas moins inférieurs car ils bénéficient de caractéristiques uniques comme Charme et possèdent une resistance hors-norme.
+Les Ghaunadains manquent des qualités inhérentes aux voleurs, mais ils n'en sont pas moins inférieurs, car ils bénéficient de caractéristiques uniques comme Charme et possèdent une resistance hors-norme.
 
-Avantages:
--  Peut lancer Amitié une fois par jour, une fois supplémentaire tous les deux niveaux.
--  Est immunisé à Aveuglement, Poison, Maladie, Sommeil, Immobilisation, et Etourdissement. Possède en plus 10% de résistance aux dégâts contondants.
--  Peut effectuer une attaque supplémentaire 'Constriction' tous les trois niveaux. Cette capacité dure 5 tours. L'attaque inflige 1D6 de dégâts et la cible doit faire un jet de sauvegarde contre l'acide sous peine d'être immobilisé durant 5 tours.
--  Peut changer de forme entre humain et vase grise une fois par jour supplémentaire tous les cinq niveaux. Une fois sous sa forme de vase, toutes les attaques sont paralysantes. Il n'y a aucune limite de temps.
+Avantages :
+- Peut lancer Amitié une fois par jour, une fois supplémentaire tous les deux niveaux.
+- Est immunisé à Aveuglement, Poison, Maladie, Sommeil, Immobilisation, et Étourdissement. Possède en plus 10 % de résistance aux dégâts contondants.
+- Peut effectuer une attaque supplémentaire 'Constriction' tous les trois niveaux. Cette capacité dure 5 tours. L'attaque inflige 1D6 de dégâts et la cible doit faire un jet de sauvegarde contre l'acide sous peine d'être immobilisée pendant 5 tours.
+- Peut changer de forme entre humain et vase grise une fois par jour supplémentaire tous les cinq niveaux. Une fois sous sa forme de vase, toutes les attaques sont paralysantes. Il n'y a aucune limite de temps.
 
-Restrictions:
--  Ne gagne que 15 points de capacité par niveau.
--  Ne peut poser des pièges.~
+Désavantages :
+- Ne gagne que 15 points de capacité par niveau.
+- Ne peut poser des pièges.~
 @7 = ~Mur'Neth~
 @8 = ~Salutations... je me présente, Mur'Neth.~ [A#MURN00]
 @9 = ~Je "reviendrai"! Plus tard...~ [A#MURN01]
@@ -54,7 +54,7 @@ Restrictions:
 @41 = ~Dans mon temps libre, je pense...~ [A#MURN33]
 @42 = ~Je sers Ghaunadaur, toi non ! Laisse-moi !~ [A#MURN34]
 @43 = ~J'en ai plus qu'assez de tes petites tapes sur mon épaule... bien qu'on ne puisse pas vraiment dire que j'en 'ai' une... Hmm...~ [A#MURN35]
-@44 = ~Meurs, vermiceau...~ [A#MURN36]
+@44 = ~Meurs, vermisseau...~ [A#MURN36]
 @45 = ~Arrrppp!~ [A#MURN37]
 @46 = ~C'est... Impossible !~ [A#MURN38]
 @47 = ~Occupe toi de tes propres saletés !~ [A#MURN39]
@@ -65,23 +65,23 @@ Restrictions:
 @52 = ~Quand vous le questionnez sur son passé, MUR'NETH se retourne vers vous et laisse échapper un long râle torturé. Bien qu'en fait il soit une vase, il semble apprécier le fait d'être considéré comme un homme.
 
 Vous voyez, à travers les paroles de Mur'Neth, combien sa dévotion envers Ghaunadaur, créateur de sa race, est grande. Il vous avoue que c'est une constante parmi les natifs de son espèce, car ils aiment vraiment le servir. Mur'Neth a récemment reçu la mission de mener une enquête dans les mines de Nashkel suite à la mort de nombreux vases et limons dans ses environs. Ghaunadaur en a été très irrité et c'est certainement pour cela qu'il accepte que Mur'Neth vous accompagne, pour l'instant...~
-@53 = ~N'appuyez pas sur Echap et ne fermez pas cette fenêtre. Appuyez sur Entrée pour quitter.
+@53 = ~N'appuyez pas sur Echap et ne fermez pas cette fenêtre. Appuyez sur Entree pour quitter.
 Ceci pour permettre la décompression des sons.~
 
-@54 = ~You have Indira installed, adding extra banters...~
-@55 = ~You have Finch installed, adding extra banters...~
-@56 = ~Time to fillet some MEAT!~ [GDOPP03]
+@54 = ~Le mod Indira est installe, ajout de banters supplementaires...~
+@55 = ~Le mod Finch est installe, ajout de banters supplementaires...~
+@56 = ~Grand temps d'avaler un STEAK !~ [GDOPP03]
 @57 = ~~ [GDOPP04]
-@58 = ~Appearances can be deceiving, monkey!~ [GDOPP01]
-@59 = ~Give yourself up, your death will be less ... painful.~ [GDOPP02]
+@58 = ~Les apparences sont trompeuses, espèce de singe !~ [GDOPP01]
+@59 = ~Rendez-vous, cela rendra votre mort moins... douloureuse.~ [GDOPP02]
 @60 = ~~ [DOPPL08]
 @61 = ~~ [DOPP08]
 @62 = ~~ [DOPP09]
 @63 = ~~ [DOPP05]
 @64 = ~~ [DOPPL09]
-@65 = ~Ghaunadan Sorcerer~
-@66 = ~Ghaunadan Druid~
+@65 = ~Sorcier Ghaunadain~
+@66 = ~Druide Ghaunadain~
 @67 = ~~ [DOPPL05]
 @68 = ~~ [DOPPL04]
-@69 = ~Remove Rare selection sounds~
-@70 = ~You need to have Mur'Neth installed to select this option.~
+@69 = ~Supprimer les sons rarement utilises lorsque le personnage est selectionne~
+@70 = ~Ce composant necessite l'installation du composant principal.~

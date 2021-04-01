@@ -44,7 +44,7 @@ AUTO_TRA ~mur'neth/%s~
 LANGUAGE ~English~
 	 ~english~
 	 ~mur'neth/english/setup.tra~
-LANGUAGE ~French par Egrevyn des D'Oghmatiques~
+LANGUAGE ~Francais (par Egrevyn des D'Oghmatiques)~
 	 ~French~
 	 ~mur'neth/english/setup.tra~
 	 ~mur'neth/french/setup.tra~
@@ -52,7 +52,7 @@ LANGUAGE ~Polish (Yarpen)~
 	 ~Polish~
 	 ~mur'neth/english/setup.tra~
 	 ~mur'neth/Polish/setup.tra~
-LANGUAGE ~Spanish (Saemon, Clan DLAN)~
+LANGUAGE ~Espanol (Saemon, Clan DLAN)~
 	 ~Spanish~
 	 ~mur'neth/english/setup.tra~
 	 ~mur'neth/Spanish/setup.tra~
@@ -60,7 +60,7 @@ LANGUAGE ~German (Leonardo Watson)~
 	 ~German~
 	 ~mur'neth/english/setup.tra~
 	 ~mur'neth/German/setup.tra~
-LANGUAGE ~Italian (Ilot)~
+LANGUAGE ~Italiano (Ilot)~
 	 ~Italian~
 	 ~mur'neth/english/setup.tra~
 	 ~mur'neth/italian/setup.tra~
@@ -102,7 +102,7 @@ MKDIR ~portraits~
 COPY ~mur'neth/portraits/A#Murnl.bmp~  ~portraits~
      ~mur'neth/ghaunadan/A#GHAUN1.BAM~ ~override~
      ~mur'neth/ghaunadan/A#GHAUN3.BAM~ ~override~
-     ~mur'neth/sounds/IMOEN28.wav~     ~override~
+//     ~mur'neth/sounds/IMOEN28.wav~     ~override~
      ~mur'neth/ghaunadan/A#GHAUN4.SPL~ ~override~ // kit bonuses
 
 ACTION_IF ee_game THEN BEGIN // bgee stuff
@@ -169,6 +169,13 @@ END
 /////                                                  \\\\\
 
 LAF HANDLE_AUDIO STR_VAR audio_path = ~mur'neth/sounds~ oggdec_path = ~mur'neth/sounds~ sox_path = ~mur'neth/sounds~ END // install audio
+
+// Special case: localized imoen28 sound clip.
+ACTION_IF ("%LANGUAGE%" STR_EQ "Spanish" OR "%LANGUAGE%" STR_EQ "Russian") BEGIN
+	COPY ~%MOD_FOLDER%/sounds/english~ ~override~
+END ELSE BEGIN
+	COPY ~%MOD_FOLDER%/sounds/%LANGUAGE%~ ~override~
+END
 
 /////                                                  \\\\\
 ///// spells                                           \\\\\

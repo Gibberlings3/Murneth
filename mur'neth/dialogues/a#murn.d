@@ -71,7 +71,7 @@ See("EDWIN")
 !StateCheck("EDWIN",CD_STATE_NOTVALID)
 !Dead("EDWIN")~ THEN @30
 == ~A#MURN~ @31
-== ~%GARRICK_BANTER%~ IF ~InParty("GARRI")
+== ~%GARRICK_BANTER%~ IF ~InParty("GARRICK")
 See("GARRICK")
 !StateCheck("GARRICK",CD_STATE_NOTVALID)
 !Dead("GARRICK")~ THEN @32

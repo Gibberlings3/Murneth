@@ -1,11 +1,11 @@
-@0    = ~<CHARNAME>, potrafiê wyczuæ ¿e niezwyk³y z ciebie <PRO_RACE>... To oznacza, ¿e jesteœ szczególnie b³ogos³awiony przez Ghaunadaura, i by³o mi przeznaczone do ciebie do³¹czyæ.~ [A#MUB01]
+@0    = ~<CHARNAME>, potrafiê wyczuæ ¿e niezwyk³y z ciebie <PRO_RACE>... To oznacza, ¿e jesteœ szczególnie b³ogos³awiony przez Ghaunadaura, i by³o mi przeznaczone do ciebie do³¹czyæ.~ [a#mub01]
 @1    = ~Mo¿liwe, ¿e masz racjê Mur'Neth. Powiedz mi coœ wiêcej o Ghaunadaurze.~
 @2    = ~Nie s¹dzê, by tak by³o. Przecie¿ nie jestem œluzem!~
 @3    = ~Czemu myœlisz, ¿e to móg³by byæ Ghaunadaur?~
 @4    = ~Nie mam wiêkszego pojêcia o bóstwach; wiedza, jak¹ uzyska³em w Candlekeep jest niewielka.~
 @5    = ~Wiesz.. nie czujê siê jakoœ specjalnie.~
 @6    = ~Zamknij siê i wracaj na ty³, nieu¿yteczny œmieciu.~
-@7    = ~Ghaunadaur jest b³ogos³awiony! Widzieliœmy niezliczone iloœci jego przeciwników i zawsze zwyciê¿aliœmy! To znak Tego Który Siê Czai.~ [A#MUB02]
+@7    = ~Ghaunadaur jest b³ogos³awiony! Widzieliœmy niezliczone iloœci jego przeciwników i zawsze zwyciê¿aliœmy! To znak Tego Który Siê Czai.~ [a#mub02]
 @8    = ~Musisz widzieæ rêkê swego bóstwa we wszystkim? Wszystko t³umaczysz tym mistycyzmem, a gdzie zwyczajny zbieg okolicznoœci czy te¿ wynik naszych umiejêtnoœci?~
 @9    = ~Wiesz.. ju¿ nie chce mi siê s³uchaæ twojego gulgocz¹cego g³osu. Czy móg³byœ ³askawie siê zamkn¹æ!~
 @10   = ~Wiesz, czujê ¿e masz racjê. Od czasu gdy do nas siê przy³¹czy³eœ, czujê ¿e moje stopy staj¹ siê jakby chudsze...~
@@ -51,7 +51,7 @@
 @50   = ~Zabieraj st¹d twoj¹ g³upi¹ wiarê i wynoœ siê przeroœniêta kupo szlamu!~
 
 
-@51   = ~Thhhhhhhrmmmmmmm...~ [A#MUB03]
+@51   = ~Thhhhhhhrmmmmmmm...~ [a#mub03]
 @52   = ~Te nienaturalne dŸwiêki s¹ dowodem twej demoniej natury, potworze!~
 @53   = ~IdŸ pomodliæ siê i pop³akaæ do sssswego fa³szywego boga, miêsko...~
 @54   = ~Wkrótce zmiotê twój parszywy niebyt z powierzchni Faerunu!~
@@ -59,7 +59,7 @@
 @56   = ~I jeœli ju¿ przy tym jesteœmy, radzi³bym uwarzaæ, kogo nazywasz fa³szywym bogiem, Ghandaurianinie.~
 @57   = ~Niech Ghaunadaur przeklnie ciê, by grzyb porósss³ twe cia³o zaœ b³ogos³awiona rasa wy¿ar³a ciê od œrodka!~
 
-@58   = ~Aloro.. zapach który unosi siê wokó³ ciebie jest... sssmaczny.~ [A#MUB04]
+@58   = ~Aloro.. zapach który unosi siê wokó³ ciebie jest... sssmaczny.~ [a#mub04]
 @59   = ~Ach! Dziêki Mureñku! Nie spodziewa³am siê, ¿e dostrze¿esz moje nowe perfumy!~
 @60   = ~Ahhhh, jesteœ w b³êdzie, miêsista.~
 @61   = ~Hmm... to nie perfumy, wiêc co? Chcia³am tylko powiedzieæ, ¿e kupi³am je w Beregoœcie.~
@@ -67,7 +67,7 @@
 @63   = ~Obiadek? Och, jaka cudowna dru¿yna do wypicia herbatki! Mama nigdy nie pozwala³a mi piæ herbaty z przyjació³mi!~
 @64   = ~Uch, dobrze. Pamiêtaj Murnisiu, nastêpnym razem, gdy bêdziesz chcia³ powiedzieæ dziewczynie komplement, mo¿esz ju¿ pomin¹æ.. t¹ ostatni¹ czêœæ - o miêsie, krwi.. Prawda? No.~
 
-@65   = ~Jesteœ niezwykle przyjemna dla mych zmys³ów Branwen.~ [A#MUB05]
+@65   = ~Jesteœ niezwykle przyjemna dla mych zmys³ów Branwen.~ [a#mub05]
 @66   = ~Hmm... nie wiem jak to odczytywaæ, ale to chyba komplement. Nie spodziewa³am siê tego po tobie, Mur'Nethu. Dziêkujê.~
 @67   = ~Wierzê, ¿e to ludzki sposób na wyra¿enie wdziêcznoœci.~
 @68   = ~Zastanawia mnie, co jest takiego we mnie, ¿e jestem w³aœnie 'mi³a twym zmys³om'? W koñcu, nie masz nawet oczu.~
@@ -92,7 +92,7 @@
 @86   = ~Mo¿e kiedyœ mi to poka¿esz, ale... heh, nie s¹dzê, bym móg³ siê tego nauczyæ!~
 @87   = ~Heh, b³aŸnie. Te¿ tak s¹dzê.~
 
-@88   = ~Czujê, ¿e wydrapa³abyœ mi oczy, gdybym je tylko mia³ wiedŸmo.~ [A#MUB06]
+@88   = ~Czujê, ¿e wydrapa³abyœ mi oczy, gdybym je tylko mia³ wiedŸmo.~ [a#mub06]
 @89   = ~Masz racjê, szlamie. Jednak ich nie masz, i dostajê ciarki przechodz¹ mi po plecach, gdy czuje, gdy mnie 'obserwujesz'...~
 @90   = ~Wiêc ja wyd³ubiê twoje, skoro <CHARNAME> nie panuje nad grup¹.~
 @91   = ~Minsc i Boo nigdy na to nie pozwol¹, z³y potworze!~
@@ -142,7 +142,7 @@
 @131  = ~Jednak doceniam twoj¹ obecnoœæ tutaj, gdy¿ pomagasz mi w spe³nianiu woli Ghaunadaura...~
 @132  = ~Och.. hhhmmmm... to mi³o.~
 
-@133  = ~Imoen, opowiedz mi o Candlekeep.~ [A#MUB07]
+@133  = ~Imoen, opowiedz mi o Candlekeep.~ [a#mub07]
 @134  = ~No dobra. Wiêc.. co chcesz wiedzieæ?~
 @135  = ~Hkkkkkkkkmmm... Wszystko. To jedno z niewielu miejsc, gdzie z jakiœ powodów, s³udzy Ghaunadaura maj¹ du¿e problemy z dosta...~
 @136  = ~Aaa! Wiem czemu! Wiesz, to przez te ksi¹¿ki.~
@@ -152,7 +152,7 @@
 @140  = ~Candlekeep jest chronione przez potê¿ne zaklêcia, które odpêdzaj¹ œluzy, galarety, owady i takie tam.. Biblioteka musi dbaæ o bezpieczeñstwo ksi¹¿ek - by zawsze by³y ³adne i œwie¿e. I ¿eby nie œmierdzia³y.~
 @141  = ~Dziêkujê Imoen, to ma sens. Uzupe³ni³aœ braki w olbrzymiej wiedzy Ghaunadaura.~
 
-@142  = ~Mskklaaaarm! Mi³oœæ. Nie s¹dzê, bym ju¿ to zrozumia³, chocia¿ widzê to blisko siebie.~ [A#MUB08]
+@142  = ~Mskklaaaarm! Mi³oœæ. Nie s¹dzê, bym ju¿ to zrozumia³, chocia¿ widzê to blisko siebie.~ [a#mub08]
 @143  = ~M-masz na myœli nas?~
 @144  = ~Dok³adnie. Widzê wasz¹ parê, czujê wasze feromony, ale jest coœ jeszcze poza tym. Coœ czego nie rozumiem.~
 @145  = ~Wyczuwam, ¿e dla ciebie mi³oœæ to pomys³ "miêsnych", prawda?~
@@ -180,7 +180,7 @@
 @166  = ~To chybaœmy siê dobrze dobrali! Tyle ci kurwa powiem!~
 @167  = ~Wierzê, ¿e ta ekssspresja u¿yta we wspólnym oznacza "dziêkujê". Ghraaak!~
 
-@168  = ~Twój g³os - twoja mowa ss¹ bardzo dziwne...~ [A#MUB09]
+@168  = ~Twój g³os - twoja mowa ss¹ bardzo dziwne...~ [a#mub09]
 @169  = ~C-co ty mówisz?~
 @170  = ~To powtarzanie czêœci s³ów... Jessteœ upoœledzony?~
 @171  = ~Ach! Moje j¹-j¹kanie siê! Zapewniam ciê, ¿e nie jest to znaczne ut-utrudnienie ¿ycia. I w ¿adnym wypadku nie jest to wynik jakiegoœ u-upoœledzenia.~
@@ -188,14 +188,14 @@
 @173  = ~Grrrrrruuuuhhhhh... Tak wiêc jest to jakaœ kara od tego, komu s³u¿ysz?~
 @174  = ~Znowu zaczyna... W ¿adnym wypadku, urodzi³em siê z tym! Wiesz Mur'Nethu, ró¿nimy siê od siebie, nawet bardzo. Proponujê ci zakoñczyæ ten temat.~
 
-@175  = ~Kivanie, jessteœ istot¹ czynu, nie s³ów. Wiedz ¿e szanujê to.~ [A#MUB10]
+@175  = ~Kivanie, jessteœ istot¹ czynu, nie s³ów. Wiedz ¿e szanujê to.~ [a#mub10]
 @176  = ~No i co z tego?~
 @177  = ~Mowa jest wynalazkiem was - miêsistych. My - œluzy, jesteœmy za tym, ¿e tylko czyny mog¹ zmieniæ œwiat.~
 @178  = ~Mogê siê z tym zgodziæ. I przez to nie zgadzam siê z wieloma twoimi s³owami jakie wypowiedzia³eœ, i wieloma rzeczami jakie uczyni³eœ.~
 @179  = ~Ale one zosta³y uczynione dla chwa³y Najœwiêtszego Ghaunadaura!~
 @180  = ~W³aœnie dlatego.~
 
-@181  = ~Skkkkklmmmm... Twoje oddanie dla Dynaheir jest godne podziwu, Minsc.~ [A#MUB11]
+@181  = ~Skkkkklmmmm... Twoje oddanie dla Dynaheir jest godne podziwu, Minsc.~ [a#mub11]
 @182  = ~Minsc stara siê to robiæ jak najlepiej. Prawda, Boo?~
 @183  = ~I wykonujesz wspania³¹ robotê Minscu.~
 @184  = ~Czujê, ¿e to robisz. Czujê to w twoim ciele.~
@@ -214,7 +214,7 @@
 @196  = ~Rozmowa o korzyœciach jest najs³odszym dŸwiêkiem dla krasnoludzkiego ucha.~
 @197  = ~Jesteœœmy do siebie podobni... Przynajmniej w sferze zainteresowañ.~
 
-@198  = ~Quaylu, co to jest? Te szk³a, które s¹ na twojej twarzy?~ [A#MUB12]
+@198  = ~Quaylu, co to jest? Te szk³a, które s¹ na twojej twarzy?~ [a#mub12]
 @199  = ~Ju¿ to powiedzia³eœ. Niektórzy mówi¹ na to 'szk³a', jednk lepiej, byœ nazywa³ to 'okularami'. Bo to przecie¿ okulary!~
 @200  = ~Rozumiem... do czego to s³u¿y?~
 @201  = ~Eeee... Daj mi spokój! nie wiesz do czego s¹ okulary?! Czy coœ jest w tej twojej œluzowatej ³epetynie?! Czy te¿ jest tam tylko gówno czy inny szlam!?~
@@ -225,7 +225,7 @@
 @206  = ~Cieszy mnie, ¿e niektóre twe organy czy ich wydzieliny s¹ podobne do s³ug Ghaunadaura. To prawdziwy zaszczyt!~
 @207  = ~M... mo¿e lepiej skoñczymy t¹ rozmowê, dobrze?~
 
-@208  = ~Wyczuwam, ¿e znowu na mnie patrzysz, m³ody cz³owieku.~ [A#MUB13]
+@208  = ~Wyczuwam, ¿e znowu na mnie patrzysz, m³ody cz³owieku.~ [a#mub13]
 @209  = ~Wiesz skarbie... podobasz mi siê.~
 @210  = ~Ha! To dowodzi tego, ¿e miêsowaci s¹ ogarniêci obsssesj¹ na punkcie swych plugawych i brudnych rytua³ów reprodukcji.~
 @211  = ~Nie ma nic z³ego w zabawieniu siê od czasu do czasu.~
@@ -269,7 +269,7 @@
 @246  = ~Jesstem wdziêczny, jednak nie mam oczu - nie mogê widz...~
 @247  = ~Tiax nie wyda³ ci zgody na mówienie!~
 
-@248  = ~Niektórzy z twego rodzaju ssss¹ na tyle inteligenti, by pod¹¿aæ za s³owem Ghaunadaura, Viconio. Zastanawiam siê, czemu nie pójdziesz za ich przyk³adem?~ [A#MUB14]
+@248  = ~Niektórzy z twego rodzaju ssss¹ na tyle inteligenti, by pod¹¿aæ za s³owem Ghaunadaura, Viconio. Zastanawiam siê, czemu nie pójdziesz za ich przyk³adem?~ [a#mub14]
 @249  = ~Niewa¿ne czy wyznawcy Ghaunadaura czy Lolth - ca³y drowi brud powinien byæ wyeksterminowany.~
 @250  = ~Ci g³upcy, któ¿y s¹ wyznawcami twego bóstwa brudu, œluzu i smrodu, nie zas³uguj¹ nawet na tytu³ 'drowa'. Ka¿dy prawdziwy drow z pogard¹ spluwa na to œcierwo.~
 @251  = ~Obecnie te¿ jessteœ wyrzutkiem swego rodzaju...~

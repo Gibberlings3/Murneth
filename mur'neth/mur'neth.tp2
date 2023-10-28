@@ -11,7 +11,9 @@ ALWAYS
   
   ACTION_IF ((FILE_EXISTS ~dlc/sod-dlc.zip~) OR (FILE_EXISTS ~sod-dlc.zip~)) THEN BEGIN FAIL @101 END // Modmerge check
 
-  ACTION_IF NOT VARIABLE_IS_SET ee_game THEN BEGIN
+  ACTION_IF NOT VARIABLE_IS_SET murneth_always THEN BEGIN
+  
+    OUTER_SET murneth_always = 1
 
     ACTION_IF GAME_IS ~bgt tutu tutu_totsc~ THEN BEGIN
 

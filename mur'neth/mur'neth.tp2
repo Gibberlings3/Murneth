@@ -1,7 +1,7 @@
-BACKUP ~mur'neth/backup~
-SUPPORT ~http://gibberlings3.net/forums/index.php?showforum=50~
+BACKUP ~weidu_external/mur'neth/backup~
+SUPPORT ~https://www.gibberlings3.net/forum/50-murneth/~
 
-VERSION ~v13.1~
+VERSION ~v14~
 
 README ~mur'neth/readme-murneth.html~
 
@@ -18,6 +18,8 @@ ALWAYS
     ACTION_IF GAME_IS ~bgt tutu tutu_totsc~ THEN BEGIN
 
       OUTER_SET ee_game = 0 // just do this once per install
+      
+      OUTER_SPRINT ~tra_location~ ~mur'neth~
 
       ACTION_FOR_EACH file IN iplot01k.itm iplot04g.itm iplot04h.itm iplot04i.itm xr2400.are xr2600.are BEGIN
         DISABLE_FROM_KEY "%file%"
@@ -26,22 +28,23 @@ ALWAYS
     END ELSE BEGIN
 
       OUTER_SET ee_game = 1 // just do this once per install
+      
+      OUTER_SPRINT ~tra_location~ ~weidu_external/mur'neth~
 
       // convert strings to UTF-8 for BGEE/BG2EE
       ACTION_DEFINE_ARRAY cdreload BEGIN setup END
-      LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~mur'neth~ reload_array = cdreload END
+      LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~mur'neth~ out_path = ~weidu_external/mur'neth~ reload_array = cdreload END
 
-	END
+	  END
 
-// Adds CD_STATE_NOTVALID state
-APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
-UNLESS ~CD_STATE_NOTVALID~
+    // Adds CD_STATE_NOTVALID state
+    APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
 	  
   END
 
 END
 
-AUTO_TRA ~mur'neth/%s~
+AUTO_TRA ~%tra_location%/%s~
 
 LANGUAGE ~English~
 	 ~english~
@@ -53,15 +56,15 @@ LANGUAGE ~Francais (par Egrevyn des D'Oghmatiques)~
 LANGUAGE ~Polish (Yarpen)~
 	 ~Polish~
 	 ~mur'neth/english/setup.tra~
-	 ~mur'neth/Polish/setup.tra~
+	 ~mur'neth/polish/setup.tra~
 LANGUAGE ~Espanol (Saemon, Clan DLAN)~
 	 ~Spanish~
 	 ~mur'neth/english/setup.tra~
-	 ~mur'neth/Spanish/setup.tra~
+	 ~mur'neth/spanish/setup.tra~
 LANGUAGE ~German (Leonardo Watson)~
 	 ~German~
 	 ~mur'neth/english/setup.tra~
-	 ~mur'neth/German/setup.tra~
+	 ~mur'neth/german/setup.tra~
 LANGUAGE ~Italiano (Ilot)~
 	 ~Italian~
 	 ~mur'neth/english/setup.tra~

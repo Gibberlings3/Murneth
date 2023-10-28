@@ -256,6 +256,26 @@ COPY ~mur'neth/creatures/A#FMURN.CRE~ ~override~
   WRITE_SHORT 0x246 (0x4000 + ~%A#GHAUN%~)
   WRITE_ASCII 0x248 ~A#MURN~ #8 // override
   WRITE_ASCII 0x2cc ~A#MURN~ #8 // dialogue
+  PATCH_IF GAME_IS ~bgee~ BEGIN // bgee actually uses bg sound selection slots    
+    SAY 0x1e0 @38 // action 4
+    SAY 0x1e4 @39 // action 5
+    SAY 0x1e8 @40 // action 6
+    SAY 0x1ec @41 // action 7
+    SAY 0x130 @42 // select rare 1
+    SAY 0x134 @43 // select rare 2
+  END ELSE BEGIN // bgt/eet/tutu use bg2-style slots
+    SAY SELECT_ACTION4 @38
+    SAY SELECT_ACTION5 @39
+    SAY SELECT_ACTION6 @40
+    SAY SELECT_ACTION7 @41
+    PATCH_IF GAME_IS ~eet~ BEGIN // eet properly supports these as of 2.6 
+      SAY 0x1d0 @42 // select rare 1
+      SAY 0x1d4 @43 // select rare 2
+    END ELSE BEGIN  
+      SAY SELECT_RARE1 @42
+      SAY SELECT_RARE2 @43
+    END  
+  END  
   SAY INITIAL_MEETING @8
   SAY MORALE @9
   SAY HAPPY @10
@@ -285,13 +305,7 @@ COPY ~mur'neth/creatures/A#FMURN.CRE~ ~override~
   SAY SELECT_COMMON6 @34
   SAY SELECT_ACTION1 @35
   SAY SELECT_ACTION2 @36
-  SAY SELECT_ACTION3 @37
-  SAY SELECT_ACTION4 @38
-  SAY SELECT_ACTION5 @39
-  SAY SELECT_ACTION6 @40
-  SAY SELECT_ACTION7 @41
-  SAY SELECT_RARE1 @42
-  SAY SELECT_RARE2 @43
+  SAY SELECT_ACTION3 @37    
   SAY CRITICAL_HIT @44
   SAY CRITICAL_MISS @45
   SAY TARGET_IMMUNE @46
@@ -531,6 +545,7 @@ END
 
 BEGIN @69
 REQUIRE_COMPONENT ~mur'neth.tp2~ 0 @70
+REQUIRE_PREDICATE GAME_IS ~tutu tutu_totsc bgt~ @71
 
 COPY_EXISTING ~A#MURN.CRE~ ~override~
   SAY SELECT_RARE1 @29

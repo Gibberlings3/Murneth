@@ -84,6 +84,7 @@ This is to allow audio decompression.~
 @68 = ~~ [DOPPL04]
 @69 = ~Remove Rare selection sounds~
 @70 = ~You need to have Mur'Neth installed to select this option.~
+@71 = ~This is not available for BGEE or EET.~
 
 @100 = ~This mod is for Tutu, BGT, EET, or BG:EE~
-@101 = ~Modmerge is required before mods can be installed on this game. Check the readme for more information and a link to download Modmerge.~
+@101 = ~DLC MErger is required before mods can be installed on this game. Check the readme for more information and a link to download Modmerge.~

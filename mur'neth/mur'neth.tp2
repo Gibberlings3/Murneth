@@ -83,6 +83,7 @@ LANGUAGE ~Russian (yota13 & p_zombie)~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @0
+LABEL ~murneth_main~
 
 INCLUDE ~mur'neth/lib/g3_cpmvars_master.tpa~ // sets variables for all sorts of stuff
 INCLUDE ~mur'neth/lib/functions.tpa~ // nifty functions
@@ -546,6 +547,7 @@ END
 BEGIN @69
 REQUIRE_COMPONENT ~mur'neth.tp2~ 0 @70
 REQUIRE_PREDICATE GAME_IS ~tutu tutu_totsc bgt~ @71
+LABEL ~murneth_rare_select_sounds~
 
 COPY_EXISTING ~A#MURN.CRE~ ~override~
   SAY SELECT_RARE1 @29

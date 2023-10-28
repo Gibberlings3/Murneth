@@ -269,7 +269,8 @@ COPY ~mur'neth/creatures/A#FMURN.CRE~ ~override~
     SAY SELECT_ACTION5 @39
     SAY SELECT_ACTION6 @40
     SAY SELECT_ACTION7 @41
-    PATCH_IF GAME_IS ~eet~ BEGIN // eet properly supports these as of 2.6 
+    PATCH_IF ((GAME_IS ~eet~) OR                          // eet properly supports these as of 2.6; so does oBG2 with TobEXAL 
+              (FILE_EXISTS_IN_GAME ~bgsndset.2da~)) BEGIN // so does oBG2 with TobEXAL
       SAY 0x1d0 @42 // select rare 1
       SAY 0x1d4 @43 // select rare 2
     END ELSE BEGIN  
@@ -475,17 +476,26 @@ ACTION_IF ee_game THEN BEGIN// BGEE
 
   END	  
 	  
-END
+END ELSE BEGIN // bgt, tutu
 
-// corrections to BGT creatures and references
-ACTION_IF GAME_IS BGT THEN BEGIN // BGT
+  ACTION_IF FILE_EXISTS_IN_GAME ~bgsndset.2da~ BEGIN // extended soundset support on oBG2 with TobEXAL
+  
+    APPEND ~bgsndset.2da~ ~A#FMURN Mix
+A#murn Mix~
 
-  COPY_EXISTING ~A#FSOR.CRE~ ~override~
-                ~A#FDRU.CRE~ ~override~
-    SAY DAMAGE @60
-    SAY DYING @64
-    SAY ATTACK1 @67
-    SAY SELECT_COMMON4 @68
+  END
+
+  // corrections to BGT creatures and references
+  ACTION_IF GAME_IS BGT THEN BEGIN // BGT
+
+    COPY_EXISTING ~A#FSOR.CRE~ ~override~
+                  ~A#FDRU.CRE~ ~override~
+      SAY DAMAGE @60
+      SAY DYING @64
+      SAY ATTACK1 @67
+      SAY SELECT_COMMON4 @68
+
+  END
 
 END
 
@@ -510,7 +520,6 @@ ACTION_IF MOD_IS_INSTALLED ~cdtweaks/setup-cdtweaks.tp2~ ~1210~ THEN BEGIN // us
     BUT_ONLY
 
 END
-
 
 // SoD/BGT compatibility: Mur'Neth leaves the party at transition.
 ACTION_IF (GAME_IS ~bgee~ AND GAME_INCLUDES ~sod~) OR (GAME_IS ~eet~) THEN BEGIN
@@ -546,7 +555,7 @@ END
 
 BEGIN @69
 REQUIRE_COMPONENT ~mur'neth.tp2~ 0 @70
-REQUIRE_PREDICATE GAME_IS ~tutu tutu_totsc bgt~ @71
+REQUIRE_PREDICATE ((GAME_IS ~tutu tutu_totsc bgt~) AND (!FILE_EXISTS_IN_GAME ~bgsndset.2da~)) @71
 LABEL ~murneth_rare_select_sounds~
 
 COPY_EXISTING ~A#MURN.CRE~ ~override~

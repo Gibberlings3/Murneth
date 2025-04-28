@@ -86,7 +86,7 @@ BEGIN @0
 LABEL ~murneth_main~
 
 INCLUDE ~mur'neth/lib/g3_cpmvars_master.tpa~ // sets variables for all sorts of stuff
-INCLUDE ~mur'neth/lib/functions.tpa~ // nifty functions
+INCLUDE ~mur'neth/lib/cd_clone_spell_bulk_first.tpa~ // nifty functions
 
 /////                                                  \\\\\
 ///// miscellany and setup                             \\\\\
@@ -195,7 +195,8 @@ COPY ~mur'neth/ghaunadan/A#GHAUNP.SPL~ ~override~ // Shapeshift: human
   SAY NAME1 @2
   SAY NAME2 @2
 
-LAF cd_clone_spell INT_VAR make_innate = 1 STR_VAR source = SPWI107 destination = ~A#GHAUN2~ END // Friends
+LAF cd_clone_spell_bulk INT_VAR make_innate = 1 STR_VAR source = spwi107 destination = ~a#ghaun2~ RET_ARRAY cd_clone_spell_array END // Friends
+INCLUDE ~mur'neth/lib/cd_clone_spell_bulk_last.tpa~
 
 COPY_EXISTING ~SPWI218.spl~ ~override/A#GHAUN3.spl~ //Ooze Touch
   SAY NAME1 @3

@@ -73,6 +73,10 @@ LANGUAGE ~Russian (yota13 & p_zombie)~
 	 ~Russian~
 	 ~mur'neth/english/setup.tra~
 	 ~mur'neth/russian/setup.tra~
+LANGUAGE ~Schinese~
+	 ~schinese~
+	 ~mur'neth/english/setup.tra~
+	 ~mur'neth/schinese/setup.tra~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
